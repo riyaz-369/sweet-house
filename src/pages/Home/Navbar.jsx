@@ -41,7 +41,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link><button className="btn btn-info px-8">Log in</button></Link>
+                    <Link>
+                        <button className="btn btn-info px-8">Log in</button>
+                    </Link>
                 </div>
             </div>
         </div>

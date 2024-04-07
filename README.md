@@ -1,4 +1,4 @@
-Resources:
+<!-- Resources:
 # React Router DOM
 # TailwindCSS
-# daisyUI and Mumba UI - components
+# daisyUI and Mumba UI - components -->

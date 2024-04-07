@@ -1,9 +1,31 @@
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
 
     const navLinks = <>
-        <li><a>Item 1</a></li>
+        <NavLink to='/'
+            className={({ isActive }) => (isActive ?
+                'btn btn-outline text-base' :
+                'btn btn-ghost text-base')} >
+            Home
+        </NavLink>
+        <NavLink to='/contact'
+            className={({ isActive }) => (isActive ?
+                'btn btn-outline text-base' :
+                'btn btn-ghost text-base')}>
+            Contact</NavLink>
+        <NavLink to='/update-profile'
+            className={({ isActive }) => (isActive ?
+                'btn btn-outline text-base' :
+                'btn btn-ghost text-base')}>
+            Update Profile</NavLink>
+        {/* <NavLink to='/profile'
+            className={({ isActive }) => (isActive ?
+                'btn btn-outline text-base' :
+                'btn btn-ghost text-base')}>
+            Profile
+        </NavLink> */}
     </>
 
     return (
@@ -18,7 +40,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost text-2xl">Sweet House</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -26,7 +48,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <Link><button className="btn btn-info px-8">Login</button></Link>
                 </div>
             </div>
         </div>

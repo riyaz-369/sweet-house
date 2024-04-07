@@ -3,9 +3,8 @@ import Navbar from "./Navbar";
 
 const Home = () => {
     return (
-        <div>
+        <div className="max-w-7xl mx-auto">
             <Navbar />
-            <h2 className="text-3xl">This is home.</h2>
         </div>
     );
 };

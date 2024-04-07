@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 
-
 const Navbar = () => {
 
     const navLinks = <>
@@ -20,12 +19,6 @@ const Navbar = () => {
                 'btn btn-outline text-base' :
                 'btn btn-ghost text-base')}>
             Update Profile</NavLink>
-        {/* <NavLink to='/profile'
-            className={({ isActive }) => (isActive ?
-                'btn btn-outline text-base' :
-                'btn btn-ghost text-base')}>
-            Profile
-        </NavLink> */}
     </>
 
     return (
@@ -48,7 +41,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link><button className="btn btn-info px-8">Login</button></Link>
+                    <Link><button className="btn btn-info px-8">Log in</button></Link>
                 </div>
             </div>
         </div>

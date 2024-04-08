@@ -42,7 +42,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <Link>
-                        <button className="btn btn-info px-8">Log in</button>
+                        <button className="btn btn-outline bg-warning text-base border-none px-7">Log in</button>
                     </Link>
                 </div>
             </div>

@@ -1,0 +1,79 @@
+[
+  {
+    "image": "https://i.ibb.co/2W0gtVf/suburban-area-main.jpg",
+    "estate_title": "Modern Family Home in Suburban Area",
+    "id": 1,
+    "segment_name": "Residential",
+    "description": "Welcome to this beautiful modern family home, nestled in a quiet suburban neighborhood. As you step inside, you'll be greeted by a warm and inviting atmosphere that's perfect for creating lasting memories with your loved ones. This spacious property boasts an open floor plan, flooded with natural light, creating a seamless flow between the living, dining, and kitchen areas. The kitchen is a chef's dream, equipped with high-end appliances, ample storage space, and a breakfast bar for casual dining. Upstairs, you'll find four generously sized bedrooms, each offering a tranquil retreat at the end of the day. Outside, the lush backyard provides the ideal setting for outdoor entertaining, with a patio area for al fresco dining and a manicured lawn for children and pets to play. With its convenient location, top-rated schools, and vibrant community, this home is the perfect place to put down roots and start your next chapter.",
+    "price": "$500,000",
+    "status": "sale",
+    "area": "2,500 sq ft",
+    "location": "Suburbia Estates, Anytown, USA",
+    "facilities": ["living room", "kitchen", "backyard"]
+  },
+  {
+    "image": "https://i.ibb.co/6mpwDK0/cozy-main.jpg",
+    "estate_title": "Cozy Cottage by the Lake",
+    "id": 2,
+    "segment_name": "Residential",
+    "description": "Escape to this charming cottage nestled beside a serene lake, where every day feels like a peaceful retreat. Step inside to discover a cozy living space adorned with rustic charm and modern comforts. The heart of the home is the well-appointed kitchen, where you can prepare delicious meals while enjoying views of the tranquil surroundings. French doors lead out to a private deck, where you can sip your morning coffee as you watch the sun rise over the water. When it's time to unwind, retreat to the comfortable bedroom, where a restful night's sleep awaits. Outside, the lush landscaping creates a sense of seclusion, while the lake beckons you to enjoy fishing, boating, or simply lounging by the shore. Whether you're seeking a weekend getaway or a permanent residence, this lakeside cottage offers the perfect blend of relaxation and natural beauty.",
+    "price": "$300,000",
+    "status": "sale",
+    "area": "1,200 sq ft",
+    "location": "Lakeview Drive, Countryside, USA",
+    "facilities": ["living room", "kitchen", "lake access"]
+  },
+  {
+    "image": "https://i.ibb.co/tYjp2Jq/student-housing-main.jpg",
+    "estate_title": "Student Housing Affordable Apartment Near Campus",
+    "id": 3,
+    "segment_name": "Residential",
+    "description": "Welcome to your new home away from home! This cozy apartment is situated just a stone's throw away from campus, making it the perfect choice for students looking for convenience and affordability. Step inside to find a bright and airy living space, complete with all the essentials for comfortable student living. The kitchen comes fully equipped with appliances and ample storage space, while the bedroom offers a quiet retreat where you can study or unwind after a long day of classes. With its unbeatable location, affordable rent, and community amenities, including laundry facilities and a communal lounge area, this student housing option has everything you need to thrive during your college years.",
+    "price": "$700/month",
+    "status": "rent",
+    "area": "600 sq ft",
+    "location": "University District, College Town, USA",
+    "facilities": [
+      "living room",
+      "kitchen",
+      "laundry facilities",
+      "communal lounge"
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/t2jxs9Y/senior-living-main.jpg",
+    "estate_title": "Senior Living Community Villa with Panoramic Ocean Views",
+    "id": 4,
+    "segment_name": "Residential",
+    "description": "Indulge in the ultimate coastal lifestyle at this opulent villa, perched on a hilltop overlooking the sparkling ocean. From the moment you arrive, you'll be captivated by the breathtaking views that stretch as far as the eye can see. Step inside to discover a grand foyer that sets the tone for the elegance that awaits. The expansive living spaces are bathed in natural light, with soaring ceilings and exquisite finishes that exude luxury at every turn. The gourmet kitchen is a culinary masterpiece, equipped with state-of-the-art appliances and a center island where friends and family can gather. Outside, the resort-style amenities rival those of a five-star hotel, with a sparkling swimming pool, lush gardens, and multiple terraces where you can soak up the sun or dine under the stars. With its unparalleled beauty and world-class amenities, this villa offers a lifestyle of luxury and refinement that's simply unmatched.",
+    "price": "$1,200,000",
+    "status": "sale",
+    "area": "4,000 sq ft",
+    "location": "Oceanview Heights, Seaside Town, USA",
+    "facilities": ["living room", "kitchen", "swimming pool", "garden"]
+  },
+  {
+    "image": "https://i.ibb.co/4WDVD1K/stylish-loft-apartment-mainn.jpg",
+    "estate_title": "Stylish Loft Apartment in Urban Center",
+    "id": 5,
+    "segment_name": "Residential",
+    "description": "Experience urban living at its finest in this stylish loft apartment located in the heart of the city. From the moment you step through the door, you'll be struck by the contemporary design and sleek finishes that define this modern masterpiece. The open-concept living area is ideal for entertaining, with floor-to-ceiling windows that offer sweeping views of the city skyline. The chef-inspired kitchen is sure to impress, with high-end appliances, quartz countertops, and ample storage space. After a long day, retreat to the luxurious master suite, where you'll find a spa-like bathroom and a spacious walk-in closet. With its unbeatable location, just steps from the city's best restaurants, shops, and cultural attractions, this loft apartment offers a lifestyle that's second to none.",
+    "price": "$700,000",
+    "status": "sale",
+    "area": "1,800 sq ft",
+    "location": "Downtown District, Metropolis, USA",
+    "facilities": ["living room", "kitchen", "city views"]
+  },
+  {
+    "image": "https://i.ibb.co/pRmLPKC/mountain-view-main.jpg",
+    "estate_title": "Spacious Family Home with Mountain Views",
+    "id": 6,
+    "segment_name": "Residential",
+    "description": "Discover the perfect blend of comfort and tranquility in this spacious family home nestled at the foot of the mountains. As you enter, you'll be greeted by a light-filled living space that's ideal for relaxing with loved ones or hosting gatherings with friends. The gourmet kitchen is a chef's dream, featuring top-of-the-line appliances, custom cabinetry, and a center island where you can prepare meals while taking in the stunning mountain views. Upstairs, the luxurious master suite offers a peaceful retreat, complete with a spa-like ensuite bathroom and a private balcony overlooking the majestic peaks. Outside, the expansive backyard provides plenty of space for outdoor activities, with a patio area for barbecues and a grassy lawn where children and pets can play. With its idyllic setting and abundance of amenities, this mountain retreat is the perfect place to call home.",
+    "price": "$400,000",
+    "status": "rent",
+    "area": "3,000 sq ft",
+    "location": "Mountain Valley Estates, Scenic Town, USA",
+    "facilities": ["living room", "kitchen", "mountain views", "backyard"]
+  }
+]

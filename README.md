@@ -1,7 +1,11 @@
-Resources:
+# Using Packages:
 
-- React Router DOM
-- TailwindCSS
-- daisyUI and Mumba UI - components
+## [React Router DOM](https://reactrouter.com/en/main/start/tutorial)
 
-* swiper js - slide
+## [TailwindCSS](https://tailwindcss.com/docs/installation)
+
+## [daisyUI](https://daisyui.com/docs/install/)
+
+## [MumbaUI](https://mambaui.com/components)
+
+## [swiper js - slide](https://swiperjs.com/)

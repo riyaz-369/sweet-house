@@ -1,4 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
+import { CiLogin } from "react-icons/ci";
+import { IoHome } from "react-icons/io5";
+import { MdContactMail } from "react-icons/md";
+import { FaUserEdit } from "react-icons/fa";
 
 const Navbar = () => {
 
@@ -7,23 +11,28 @@ const Navbar = () => {
             className={({ isActive }) => (isActive ?
                 'btn btn-outline text-base rounded-md' :
                 'btn btn-ghost text-base rounded-md')} >
+            <IoHome />
             Home
         </NavLink>
         <NavLink to='/contact'
             className={({ isActive }) => (isActive ?
                 'btn btn-outline text-base rounded-md' :
                 'btn btn-ghost text-base rounded-md')}>
-            Contact</NavLink>
+            <MdContactMail />
+            Contact
+        </NavLink>
         <NavLink to='/update-profile'
             className={({ isActive }) => (isActive ?
                 'btn btn-outline text-base rounded-md' :
                 'btn btn-ghost text-base rounded-md')}>
-            Update Profile</NavLink>
+            <FaUserEdit />
+            Update Profile
+        </NavLink>
     </>
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,8 +50,11 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link>
-                        <button className="btn btn-neutral text-white text-base border-none rounded-md px-7">Log in</button>
+                    <Link to="/login">
+                        <button className="btn btn-neutral text-white text-base border-none rounded-md px-6">
+                            <CiLogin />
+                            Log in
+                        </button>
                     </Link>
                 </div>
             </div>

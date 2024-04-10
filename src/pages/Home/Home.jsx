@@ -12,7 +12,7 @@ const Home = () => {
             <div className="mt-8 max-w-7xl mx-auto">
                 <Navbar />
             </div>
-            <div className="mt-8 bg-orange-50 p-8">
+            <div className="mt-8 bg-base-200 p-8">
                 <div className="max-w-7xl mx-auto">
                     <Banner />
                 </div>

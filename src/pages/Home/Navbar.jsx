@@ -5,19 +5,19 @@ const Navbar = () => {
     const navLinks = <>
         <NavLink to='/'
             className={({ isActive }) => (isActive ?
-                'btn btn-outline text-base' :
-                'btn btn-ghost text-base')} >
+                'btn btn-outline text-base rounded-md' :
+                'btn btn-ghost text-base rounded-md')} >
             Home
         </NavLink>
         <NavLink to='/contact'
             className={({ isActive }) => (isActive ?
-                'btn btn-outline text-base' :
-                'btn btn-ghost text-base')}>
+                'btn btn-outline text-base rounded-md' :
+                'btn btn-ghost text-base rounded-md')}>
             Contact</NavLink>
         <NavLink to='/update-profile'
             className={({ isActive }) => (isActive ?
-                'btn btn-outline text-base' :
-                'btn btn-ghost text-base')}>
+                'btn btn-outline text-base rounded-md' :
+                'btn btn-ghost text-base rounded-md')}>
             Update Profile</NavLink>
     </>
 
@@ -36,13 +36,13 @@ const Navbar = () => {
                     <a className="btn btn-ghost rounded-md text-3xl">Sweet House</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 space-x-2">
                         {navLinks}
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <Link>
-                        <button className="btn btn-outline bg-warning text-base border-none rounded-md px-7">Log in</button>
+                        <button className="btn btn-neutral text-white text-base border-none rounded-md px-7">Log in</button>
                     </Link>
                 </div>
             </div>

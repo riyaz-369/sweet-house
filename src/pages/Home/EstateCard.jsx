@@ -1,30 +1,41 @@
+import PropTypes from 'prop-types';
 
+const EstateCard = ({ house }) => {
 
-const EstateCard = () => {
+    const { image, estate_title, segment_name, description, price, status, area, location, facilities } = house;
+    const shortDes = description => {
+        const splitTo = description.split(". ")
+        return splitTo.slice(0, 1).join(". ") + ".";
+    }
+
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-md hover:shadow-xl">
-            <figure>
-                <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
-            </figure>
+        <div className="card card-compact rounded-md bg-base-100 shadow-md hover:shadow-xl">
+            <img className='rounded-t-md' src={image} alt={house.estate_title} />
             <div className="card-body">
-                <h2 className="card-title text-2xl">Beautiful Home Made For You</h2>
-                <p className="text-base opacity-90">If a dog chews shoes whose shoes does he choose?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias amet, animi labore facilis doloremque enim a! Labore et vel quisquam! </p>
-                <div className="my-3 border-t">
-                    <p className="font-bold space-x-16 mt-8">Location:
-                        <span className="font-normal ml-2">
-                            dhaka, mirpur
+                <h2 className="card-title text-[22px]">{estate_title}</h2>
+                <p className="text-base opacity-90">{shortDes(description)}</p>
+                <div className="my-3 space-y-2 border-t-2 border-dashed">
+                    <p className="font-bold text-base mt-4">Location:
+                        <span className="font-normal ml-2 opacity-90">
+                            {location}
                         </span>
-                        <span className="font-semibold border-l-2 pl-3">For <span className="font-normal">Sell</span></span>
                     </p>
-                    <p className="font-bold">Area: <span className="font-normal">2000 sq ft</span></p>
+                    <div className='flex'>
+                        <p className="font-bold text-base">Area: <span className="font-normal opacity-90">{area}</span></p>
+                        <p className="font-semibold text-base border-l-2 border-gray-400 pl-3">For <span className="font-normal opacity-90">{status}</span></p>
+                    </div>
                 </div>
                 <div className="card-actions flex justify-between">
-                    <h3 className="font-bold text-3xl">$336</h3>
-                    <button className="btn btn-warning text-base">View Property</button>
+                    <h3 className="font-bold text-xl">{price}</h3>
                 </div>
+                <button className="btn btn-neutral rounded-md hover:text-white">View Property</button>
             </div>
         </div>
     );
 };
+
+EstateCard.propTypes = {
+    house: PropTypes.object,
+}
 
 export default EstateCard;

@@ -1,9 +1,12 @@
 import Banner from "./Banner";
 import EstateSection from "./EstateSection";
 import Navbar from "./Navbar";
+import { useLoaderData } from "react-router-dom";
 
 
 const Home = () => {
+    const houses = useLoaderData()
+
     return (
         <div className="font-lato">
             <div className="mt-8 max-w-7xl mx-auto">
@@ -14,8 +17,8 @@ const Home = () => {
                     <Banner />
                 </div>
             </div>
-            <div className="my-16 mt-20">
-                <EstateSection />
+            <div className="my-16 mt-20 max-w-7xl mx-auto">
+                <EstateSection houses={houses} />
             </div>
         </div>
     );

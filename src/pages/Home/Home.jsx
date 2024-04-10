@@ -9,9 +9,6 @@ const Home = () => {
 
     return (
         <div className="font-lato">
-            <div className="mt-8 max-w-7xl mx-auto">
-                <Navbar />
-            </div>
             <div className="mt-8 bg-base-200 p-8">
                 <div className="max-w-7xl mx-auto">
                     <Banner />

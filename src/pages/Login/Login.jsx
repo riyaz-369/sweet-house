@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
 
+    const { signInUser } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
@@ -27,7 +29,15 @@ const Login = () => {
             return
         }
         else {
-            toast.success("Login Success !")
+            signInUser(email, password)
+                .then(() => {
+                    toast.success("Login Success !")
+                })
+                .catch(error => {
+                    const errorMsg = (error.code.slice(5, 12));
+                    const err = (errorMsg.charAt(0).toUpperCase() + errorMsg.slice(1));
+                    toast.error(`Incorrect or ${err} password`);
+                });
             return
         }
     }
@@ -61,7 +71,7 @@ const Login = () => {
                             <Link href="">Forget Password?</Link>
                         </div>
                     </div>
-                    <input className="btn btn-neutral w-full hover:text-white text-base" type="submit" value="Log In" />
+                    <input className="btn btn-neutral w-full hover:text-white text-base" type="submit" value="LOG IN" />
                 </form>
 
                 {/* login with social account */}

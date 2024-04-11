@@ -8,11 +8,15 @@ const Register = () => {
     const [registerError, setRegisterError] = useState('');
     const [successMsg, setSuccessMsg] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [acceptTrams, setAcceptTrams] = useState(false);
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
     const handleRegister = (data) => {
+        const name = data.name;
         const email = data.email;
+        const photoURL = data.photoURL;
         const password = data.password;
+        const conditions = data.conditions;
 
         setRegisterError('');
         setSuccessMsg('');
@@ -28,6 +32,10 @@ const Register = () => {
         else if (!/^(?=.*[a-z])/.test(password)) {
             setRegisterError('Password must have an lowercase letter');
             return
+        }
+        else if (!conditions) {
+            setRegisterError('Accept our trams & condition !')
+            return;
         }
         else {
             setSuccessMsg("Registration Success !")
@@ -45,7 +53,7 @@ const Register = () => {
                     className="space-y-4">
                     <div className="space-y-1 text-sm">
                         <label className="block dark:text-gray-600">Full Name</label>
-                        <input type="name" placeholder="Your Name"
+                        <input type="text" placeholder="Your Name"
                             className="w-full input input-bordered px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
                             {...register("name", { required: true })} />
                         {errors.name && <p className="text-sm text-red-500">Name is required</p>}
@@ -72,7 +80,8 @@ const Register = () => {
 
                     </div>
                     <div className="flex gap-2">
-                        <input type="checkbox" defaultChecked className="checkbox checkbox-sm" />
+                        <input type="checkbox" className="checkbox checkbox-sm"
+                            {...register("conditions")} />
                         <p>Accept our <Link className="btn-link text-gray-800" href="">trams and conditions?</Link></p>
                     </div>
                     <input className="btn btn-neutral w-full hover:text-white text-base" type="submit" value="Log In" />

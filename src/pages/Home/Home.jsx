@@ -1,8 +1,6 @@
 import Banner from "./Banner";
 import EstateSection from "./EstateSection";
-import Navbar from "./Navbar";
 import { useLoaderData } from "react-router-dom";
-
 
 const Home = () => {
     const houses = useLoaderData()

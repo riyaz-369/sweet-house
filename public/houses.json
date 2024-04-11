@@ -1,6 +1,10 @@
 [
   {
-    "image": "https://i.ibb.co/2W0gtVf/suburban-area-main.jpg",
+    "image": "https://i.ibb.co/L9mRqwG/depositphotos-516874110-stock-photo-dutch-suburban-area-with-modern.webp",
+    "image1": "https://i.ibb.co/BnN2V56/suburban-area-1.jpg",
+    "image2": "https://i.ibb.co/q9g4G62/suburban-area-2.jpg",
+    "image3": "https://i.ibb.co/LkVTSJH/suburban-area-3.jpg",
+    "image4": "https://i.ibb.co/3SbbdpY/1000-F-558121719-b-VNQtcm0-VY2m9w-TPDfnosw-WUVr5-Y0d-P6.jpg",
     "estate_title": "Modern Family Home in Suburban Area",
     "id": 1,
     "segment_name": "Residential",
@@ -9,10 +13,21 @@
     "status": "sale",
     "area": "2,500 sq ft",
     "location": "Suburbia Estates, Anytown, USA",
-    "facilities": ["living room", "kitchen", "backyard"]
+    "facilities": ["living room", "kitchen", "backyard"],
+    "features": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "floors": 2,
+      "elevators_in_building": false,
+      "floor_level": "N/A"
+    }
   },
   {
-    "image": "https://i.ibb.co/6mpwDK0/cozy-main.jpg",
+    "image": "https://i.ibb.co/qjkfCzV/lake-cottage-exterior.jpg",
+    "image1": "https://i.ibb.co/3pHG6Qr/cozy-lake1.jpg",
+    "image2": "https://i.ibb.co/cvZsddp/cozy-lake2.jpg",
+    "image3": "https://i.ibb.co/QnWWVL7/cozy-lake3.jpg",
+    "image4": "https://i.ibb.co/C6ZnmQc/images-q-tbn-ANd9-Gc-QCb-LUG2m-Zf-Pj-s-Fis-GMgd-ATFk-N8jd8-HBk-Xw-Ug-Ikq6-Huvq6mw-KI-l-Yw-Sbk1r-Sax.jpg",
     "estate_title": "Cozy Cottage by the Lake",
     "id": 2,
     "segment_name": "Residential",
@@ -21,10 +36,21 @@
     "status": "sale",
     "area": "1,200 sq ft",
     "location": "Lakeview Drive, Countryside, USA",
-    "facilities": ["living room", "kitchen", "lake access"]
+    "facilities": ["living room", "kitchen", "lake access"],
+    "features": {
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "floors": 1,
+      "elevators_in_building": false,
+      "floor_level": "N/A"
+    }
   },
   {
-    "image": "https://i.ibb.co/tYjp2Jq/student-housing-main.jpg",
+    "image": "https://i.ibb.co/JRJ8gG1/1920-new-housing-on-the-way-for-people-in-need-in-kelowna.jpg",
+    "image1": "https://i.ibb.co/8jdCmv9/student-housing1.jpg",
+    "image2": "https://i.ibb.co/M67Bf6P/student-housing-2.jpg",
+    "image3": "https://i.ibb.co/mzsMVt8/student-housing-3.jpg",
+    "image4": "https://i.ibb.co/C93k2hn/images-q-tbn-ANd9-Gc-SS-0p-Xoa-UQ4fw-Jlev-WAFejqi-b49je6-Xhs4cw-F-Agy-Fg-s.jpg",
     "estate_title": "Student Housing Affordable Apartment Near Campus",
     "id": 3,
     "segment_name": "Residential",
@@ -38,10 +64,21 @@
       "kitchen",
       "laundry facilities",
       "communal lounge"
-    ]
+    ],
+    "features": {
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "floors": 1,
+      "elevators_in_building": true,
+      "floor_level": 6
+    }
   },
   {
-    "image": "https://i.ibb.co/t2jxs9Y/senior-living-main.jpg",
+    "image": "https://i.ibb.co/QPCpSjd/0ea45c7b-264a-4810-bbd1-335cddfdffea-0.jpg",
+    "image1": "https://i.ibb.co/RcKQLPs/senior-living-1.jpg",
+    "image2": "https://i.ibb.co/WVpwXkm/senior-living-2.jpg",
+    "image3": "https://i.ibb.co/3rVNS5C/senior-living-3.jpg",
+    "image4": "https://i.ibb.co/6ZcSbv0/images-q-tbn-ANd9-Gc-Reih117n-Y4-PEnjvbiz-IPX16-Gkr-BVF1-WS7qigpm-Wcw-Wbw-s.jpg",
     "estate_title": "Senior Living Community Villa with Panoramic Ocean Views",
     "id": 4,
     "segment_name": "Residential",
@@ -50,10 +87,21 @@
     "status": "sale",
     "area": "4,000 sq ft",
     "location": "Oceanview Heights, Seaside Town, USA",
-    "facilities": ["living room", "kitchen", "swimming pool", "garden"]
+    "facilities": ["living room", "kitchen", "swimming pool", "garden"],
+    "features": {
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "floors": 2,
+      "elevators_in_building": false,
+      "floor_level": "N/A"
+    }
   },
   {
-    "image": "https://i.ibb.co/4WDVD1K/stylish-loft-apartment-mainn.jpg",
+    "image": "https://i.ibb.co/rtcs978/image-1-1024x1024.webp",
+    "image1": "https://i.ibb.co/G9LTD7P/stylish-loft-apartment-1.jpg",
+    "image2": "https://i.ibb.co/q0CK2K2/stylish-loft-apartment-2.jpg",
+    "image3": "https://i.ibb.co/254bjky/stylish-loft-apartment-3.jpg",
+    "image4": "https://i.ibb.co/6HQtvq2/images-q-tbn-ANd9-Gc-TH5-WTz-Bdx-DFn04-UTm-Q8zekfy04-At-KBCMxsh0ri-JPst9w-s.jpg",
     "estate_title": "Stylish Loft Apartment in Urban Center",
     "id": 5,
     "segment_name": "Residential",
@@ -62,10 +110,21 @@
     "status": "sale",
     "area": "1,800 sq ft",
     "location": "Downtown District, Metropolis, USA",
-    "facilities": ["living room", "kitchen", "city views"]
+    "facilities": ["living room", "kitchen", "city views"],
+    "features": {
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "floors": 1,
+      "elevators_in_building": true,
+      "floor_level": 5
+    }
   },
   {
-    "image": "https://i.ibb.co/pRmLPKC/mountain-view-main.jpg",
+    "image": "https://i.ibb.co/LnpSCTF/188936fc-z.jpg",
+    "image1": "https://i.ibb.co/XxTgPyt/mountain-view-1.jpg",
+    "image2": "https://i.ibb.co/XxTgPyt/mountain-view-1.jpg",
+    "image3": "https://i.ibb.co/6nXNCdj/mountain-view-3.jpg",
+    "image4": "https://i.ibb.co/sCRtNCT/images-q-tbn-ANd9-Gc-T6v-CD9jas-F2q13-Csm-Dz-ZX6-J7-N6joh-E7-Nq4-DHt-Ik5-Nt-Q-s.jpg",
     "estate_title": "Spacious Family Home with Mountain Views",
     "id": 6,
     "segment_name": "Residential",
@@ -74,6 +133,13 @@
     "status": "rent",
     "area": "3,000 sq ft",
     "location": "Mountain Valley, Scenic Town, USA",
-    "facilities": ["living room", "kitchen", "mountain views", "backyard"]
+    "facilities": ["living room", "kitchen", "mountain views", "backyard"],
+    "features": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "floors": 2,
+      "elevators_in_building": false,
+      "floor_level": "N/A"
+    }
   }
 ]

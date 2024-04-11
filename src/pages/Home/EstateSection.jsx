@@ -10,7 +10,7 @@ const EstateSection = ({ houses }) => {
                 <p className="opacity-80">Step into the world of residential retreats, where tranquility meets functionality in the comfort of your own space. <br /> Browse through a myriad of options, from quaint suburban homes to luxurious urban dwellings, each offering a haven tailored to your lifestyle. <br /> Find solace and inspiration as you embark on the journey to find your perfect residential sanctuary.</p>
             </div>
 
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-8">
                 {
                     houses.map(house => <EstateCard key={house.id} house={house}></EstateCard>)
                 }

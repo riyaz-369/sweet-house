@@ -5,6 +5,7 @@ import Contact from "../pages/Contact/Contact";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 import Login from "../pages/Login/Login";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import EstateDetails from "../pages/EstateDetails/EstateDetails";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login />
+            },
+            {
+                path: "/house-details/:id",
+                element: <EstateDetails />,
+                loader: () => fetch("./houses.json")
             }
         ]
     }

@@ -1,7 +1,10 @@
 import EstateCard from "./EstateCard";
 import PropTypes from 'prop-types';
+import { useLoaderData } from "react-router-dom";
 
-const EstateSection = ({ houses }) => {
+const EstateSection = () => {
+
+    const houses = useLoaderData();
 
     return (
         <>

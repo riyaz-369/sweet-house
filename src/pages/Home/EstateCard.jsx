@@ -9,7 +9,7 @@ const EstateCard = ({ house }) => {
 
     const { image, estate_title, description, price, status, area, location, id } = house;
     const shortDes = description => {
-        const splitTo = description.split(". ")
+        const splitTo = description.split(". ");
         return splitTo.slice(0, 1).join(". ") + ".";
     }
 

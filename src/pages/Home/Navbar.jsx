@@ -56,6 +56,9 @@ const Navbar = () => {
                             Log in
                         </button>
                     </Link>
+                    <button className="btn btn-neutral text-white text-base border-none rounded-full">
+                        Profile
+                    </button>
                 </div>
             </div>
         </div>

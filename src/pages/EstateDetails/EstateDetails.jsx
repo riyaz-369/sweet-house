@@ -16,7 +16,7 @@ const EstateDetails = () => {
     const { image, image1, image2, image3, image4, estate_title, segment_name, description, price, status, area, location, facilities, features } = house;
 
     return (
-        <div className="card rounded-md max-w-7xl mx-auto p-4 mb-12 shadow-xl">
+        <div className="card rounded-md max-w-7xl mx-auto p-4 my-12 shadow-xl">
             <img className='rounded-md h-[550px]' src={image} alt={house.estate_title} />
             <div className="relative flex gap-3 py-6 overflow-x-auto">
                 <img className="h-48 aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image1} alt={estate_title} />

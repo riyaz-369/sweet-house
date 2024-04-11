@@ -5,8 +5,10 @@ import Footer from "../pages/Footer";
 const Root = () => {
     return (
         <div>
-            <div className="mt-8 max-w-7xl mx-auto">
-                <Navbar />
+            <div className="bg-base-200 bg-opacity-35">
+                <div className="mt-8 max-w-7xl mx-auto">
+                    <Navbar />
+                </div>
             </div>
             <Outlet />
             <Footer />

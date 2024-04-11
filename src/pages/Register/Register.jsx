@@ -8,8 +8,8 @@ const Register = () => {
     const [registerError, setRegisterError] = useState('');
     const [successMsg, setSuccessMsg] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [acceptTrams, setAcceptTrams] = useState(false);
-    const { register, handleSubmit, formState: { errors }, } = useForm();
+
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const handleRegister = (data) => {
         const name = data.name;
@@ -43,8 +43,6 @@ const Register = () => {
         }
     }
 
-    console.log(registerError, successMsg)
-
     return (
         <div className="max-w-7xl flex justify-around items-center mx-auto my-12">
             <div className="min-w-[500px] p-8 space-y-3 shadow-md hover:shadow-xl transition-all rounded-md dark:bg-gray-50 dark:text-gray-800">
@@ -73,9 +71,13 @@ const Register = () => {
                     </div>
                     <div className="space-y-1 text-sm">
                         <label className="block dark:text-gray-600">Password</label>
-                        <input type="password" placeholder="******"
+                        <input type={showPassword ? "text" : "password"} placeholder="******"
                             className="w-full input input-bordered px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
                             {...register("password", { required: true })} />
+                        <div onClick={() => setShowPassword(!showPassword)}
+                            className="text-lg absolute -translate-y-9 translate-x-[400px]">
+                            {showPassword ? <FaEye /> : <FaEyeSlash />}
+                        </div>
                         {errors.password && <span className="text-sm text-red-500">Password is required</span>}
 
                     </div>

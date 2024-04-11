@@ -8,3 +8,4 @@
 - #### [react-prop-types](https://www.npmjs.com/package/prop-types)
 - #### [react-icon](https://react-icons.github.io/react-icons/)
 - #### [react-hook-form](https://react-hook-form.com/)
+- #### [react-toastify](https://fkhadra.github.io/react-toastify/installation/)

@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
-    const [registerError, setRegisterError] = useState('');
-    const [successMsg, setSuccessMsg] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -18,27 +18,24 @@ const Register = () => {
         const password = data.password;
         const conditions = data.conditions;
 
-        setRegisterError('');
-        setSuccessMsg('');
-
         if (password.length < 6) {
-            setRegisterError('Length must be at least 6 character.');
+            toast.error('Length must be at least 6 character.');
             return
         }
         else if (!/^(?=.*[A-Z])/.test(password)) {
-            setRegisterError('Password must have an uppercase letter');
+            toast.error('Password must have an uppercase letter');
             return
         }
         else if (!/^(?=.*[a-z])/.test(password)) {
-            setRegisterError('Password must have an lowercase letter');
+            toast.error('Password must have an lowercase letter');
             return
         }
         else if (!conditions) {
-            setRegisterError('Accept our trams & condition !')
+            toast.warning('Accept our trams & condition !')
             return;
         }
         else {
-            setSuccessMsg("Registration Success !")
+            toast.success("Registration Success !")
             return
         }
     }
@@ -103,6 +100,7 @@ const Register = () => {
             <div>
                 <h2 className="text-4xl font-semibold">Register your account to <br /> access.</h2>
             </div>
+            <ToastContainer position="top-center" />
         </div>
     );
 };

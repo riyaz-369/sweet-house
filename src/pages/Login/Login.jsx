@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
-    const [loginError, setLoginError] = useState('');
-    const [successMsg, setSuccessMsg] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
@@ -14,23 +14,20 @@ const Login = () => {
         const email = data.email;
         const password = data.password;
 
-        setLoginError('');
-        setSuccessMsg('');
-
         if (password.length < 6) {
-            setLoginError('Length must be at least 6 character.');
+            toast.error('Length must be at least 6 character.')
             return
         }
         else if (!/^(?=.*[A-Z])/.test(password)) {
-            setLoginError('Password must have an uppercase letter');
+            toast.error('Password must have an uppercase letter');
             return
         }
         else if (!/^(?=.*[a-z])/.test(password)) {
-            setLoginError('Password must have an lowercase letter');
+            toast.error('Password must have an lowercase letter');
             return
         }
         else {
-            setSuccessMsg("Login Success !")
+            toast.success("Login Success !")
             return
         }
     }
@@ -66,23 +63,19 @@ const Login = () => {
                     </div>
                     <input className="btn btn-neutral w-full hover:text-white text-base" type="submit" value="Log In" />
                 </form>
+
+                {/* login with social account */}
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
                     <p className="px-3 text-sm dark:text-gray-600">Login with social accounts</p>
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
                 </div>
-                <div className="flex justify-center space-x-4">
-                    <button aria-label="Log in with Google" className="p-3 rounded-sm">
-
+                <div className="flex justify-center">
+                    <button className="p-3 text-3xl">
+                        <FaGoogle />
                     </button>
-                    <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
-
-                    </button>
-                    <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
-                        {/* <FaFacebook></FaFacebook> */}
-                    </button>
-                    <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
-
+                    <button className="p-3 text-3xl">
+                        <FaGithub />
                     </button>
                 </div>
                 <p className="text-center sm:px-6 dark:text-gray-600">Do not have an account?
@@ -96,6 +89,7 @@ const Login = () => {
             <div>
                 <h2 className="text-4xl font-semibold">Login or register to access <br /> your account.</h2>
             </div>
+            <ToastContainer position="top-center" />
         </div >
     );
 };

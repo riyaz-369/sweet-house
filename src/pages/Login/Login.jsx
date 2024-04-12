@@ -8,8 +8,8 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
 
-    const { signInUser } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
+    const { signInUser, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
     const handleLogIn = (data) => {
@@ -31,7 +31,7 @@ const Login = () => {
         else {
             signInUser(email, password)
                 .then(() => {
-                    toast.success("Login Success !")
+                    toast.success("Login success !")
                 })
                 .catch(error => {
                     const errorMsg = (error.code.slice(5, 12));
@@ -40,6 +40,23 @@ const Login = () => {
                 });
             return
         }
+    }
+
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+            .then(() => {
+                toast.success('Login success !')
+            }).catch((error) => {
+                console.log(error.message)
+            })
+    }
+    const handleGithubLogin = () => {
+        signInWithGitHub()
+            .then(() => {
+                toast.success('Login success !')
+            }).catch((error) => {
+                console.log(error.message)
+            })
     }
 
     return (
@@ -71,7 +88,7 @@ const Login = () => {
                             <Link href="">Forget Password?</Link>
                         </div>
                     </div>
-                    <input className="btn btn-neutral w-full hover:text-white" type="submit" value="LOG IN" />
+                    <input className="btn btn-neutral w-full rounded-md hover:text-white" type="submit" value="LOG IN" />
                 </form>
 
                 {/* login with social account */}
@@ -81,10 +98,10 @@ const Login = () => {
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
                 </div>
                 <div className="flex justify-center">
-                    <button className="p-3 text-3xl">
+                    <button onClick={handleGoogleLogin} className="btn btn-ghost rounded-md text-3xl">
                         <FaGoogle />
                     </button>
-                    <button className="p-3 text-3xl">
+                    <button onClick={handleGithubLogin} className="btn btn-ghost rounded-md text-3xl">
                         <FaGithub />
                     </button>
                 </div>

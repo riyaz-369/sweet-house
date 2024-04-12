@@ -3,7 +3,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { BiArea } from "react-icons/bi";
 import { MdOutlineSell } from "react-icons/md";
 import { CgMoreR } from "react-icons/cg";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const EstateCard = ({ house }) => {
 

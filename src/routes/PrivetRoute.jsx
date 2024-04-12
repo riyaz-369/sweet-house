@@ -8,8 +8,15 @@ const PrivetRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <div className="flex items-center justify-center h-screen">
-            <span className="loading loading-dots loading-lg"></span>
+        return <div className="flex max-w-7xl h-screen mx-auto">
+            <div className="flex flex-col w-full m-8 animate-pulse h-96">
+                <div className="h-48 rounded-t dark:bg-gray-300"></div>
+                <div className="flex-1 px-4 py-8 space-y-4 sm:p-8 dark:bg-gray-50">
+                    <div className="w-full h-6 rounded dark:bg-gray-300"></div>
+                    <div className="w-full h-6 rounded dark:bg-gray-300"></div>
+                    <div className="w-3/4 h-6 rounded dark:bg-gray-300"></div>
+                </div>
+            </div>
         </div>
     }
     if (user) {

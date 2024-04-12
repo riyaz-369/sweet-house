@@ -63,7 +63,7 @@ const Banner = () => {
                                 <div className="flex p-32">
                                     <div>
                                         <h1 className="mb-5 text-5xl font-bold text-white">Modern Single Family <br /> House </h1>
-                                        <p className="mb-5 text-white lg:max-w-md text-sm opacity-80">Embrace sleek design and spacious living in this stunning modern single-family house. With clean lines, abundant natural light, and thoughtful amenities, it's the perfect blend of style and functionality for contemporary living. Welcome to your oasis of modern comfort.</p>
+                                        <p className="mb-5 text-white lg:max-w-md text-sm opacity-80">Embrace sleek design and spacious living in this stunning modern single-family house. With clean lines, abundant natural light, and thoughtful amenities, it is the perfect blend of style and functionality for contemporary living. Welcome to your oasis of modern comfort.</p>
                                         <button
                                             className="btn btn-outline text-white text-base hover:bg-white hover:text-black rounded-md px-6">
                                            <CgMoreR/>

@@ -74,8 +74,8 @@ const Navbar = () => {
                             <NavLink to="/profile">
                                 <div className="relative inline-block group">
                                     <img src={user.photoURL} alt={user.displayName} className="w-11 rounded-full ring ring-offset-1 ring-neutral" />
-                                    <div className="absolute top-12 left-12 -translate-x-1/2 opacity-0 text-black duration-300 group-hover:opacity-100 min-w-max">
-                                        <h3 className="text-sm font-medium text-center">{user.displayName}</h3>
+                                    <div className="absolute top-[52px] bg-neutral -translate-x-1/2 opacity-0 text-white p-2 rounded-md duration-300 group-hover:opacity-100 min-w-max">
+                                        <h3 className="text-sm text-center">{user.displayName}</h3>
                                     </div>
                                 </div>
                             </NavLink>

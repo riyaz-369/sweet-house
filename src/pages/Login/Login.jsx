@@ -33,8 +33,8 @@ const Login = () => {
         else {
             signInUser(email, password)
                 .then(() => {
-                    toast.success("Login success !")
-                    navigate(location?.state ? location.state : "/")
+                    toast.success("Login success !");
+                    navigate(location?.state ? location.state : "/");
                 })
                 .catch(error => {
                     const errorMsg = (error.code.slice(5, 12));
@@ -50,8 +50,8 @@ const Login = () => {
             .then(() => {
                 toast.success('Login success !');
                 navigate(location?.state ? location.state : "/");
-            }).catch((error) => {
-                console.log(error.message);
+            }).catch(() => {
+                toast.error("Something went wrong !");
             });
     }
     const handleGithubLogin = () => {

@@ -8,17 +8,13 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext)
+    const { createUser, userProfile } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const handleRegister = (data) => {
-        const name = data.name;
-        const email = data.email;
-        const photoURL = data.photoURL;
-        const password = data.password;
-        const conditions = data.conditions;
+        const { name, email, photoURL, password, conditions } = data;
 
         if (password.length < 6) {
             toast.error('Length must be at least 6 character.');
@@ -39,7 +35,11 @@ const Register = () => {
         else {
             createUser(email, password)
                 .then(() => {
-                    toast.success("Registration Successful !");
+                    userProfile(name, photoURL)
+                        .then(() => {
+                            // navigate
+                        })
+                    toast.success("Registration Success !");
                 })
                 .catch(error => {
                     const errorMsg = (error.code.split("-").join(" ").slice(5, error.code.length));
@@ -53,7 +53,7 @@ const Register = () => {
     return (
         <div className="max-w-7xl flex justify-around items-center mx-auto my-12">
             <div className="min-w-[500px] p-8 space-y-3 shadow-md hover:shadow-xl transition-all rounded-md dark:bg-gray-50 dark:text-gray-800">
-                <h1 className="text-3xl font-semibold mb-8 text-center">Register your account</h1>
+                <h1 className="text-3xl font-semibold mb-8 text-center">Register Now</h1>
                 <form onSubmit={handleSubmit(handleRegister)}
                     className="space-y-4">
                     <div className="space-y-1 text-sm">

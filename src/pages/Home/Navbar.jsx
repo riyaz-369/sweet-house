@@ -3,8 +3,13 @@ import { CiLogin } from "react-icons/ci";
 import { IoHome } from "react-icons/io5";
 import { MdContactMail } from "react-icons/md";
 import { FaUserEdit } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+
+    const { user } = useContext(AuthContext);
+    console.log(user)
 
     const navLinks = <>
         <NavLink to='/'
@@ -49,16 +54,31 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <Link to="/login">
+                <div className="navbar-end space-x-4">
+                    <Link>
                         <button className="btn btn-neutral text-white text-base border-none rounded-md px-6">
                             <CiLogin />
-                            Log in
+                            Log Out
                         </button>
                     </Link>
-                    <button className="btn btn-neutral text-white text-base border-none rounded-full">
-                        Profile
-                    </button>
+                    {
+                        !user ? <Link to="/login">
+                            <button className="btn btn-neutral text-white text-base border-none rounded-md px-6">
+                                <CiLogin />
+                                Log in
+                            </button>
+                        </Link> :
+
+                            <div className="relative inline-block group">
+                                <img src={user.photoURL} alt={user.displayName} className="w-11 rounded-full ring ring-offset-1 ring-neutral" />
+                                <div className="absolute top-13 left-1/2 -translate-x-1/2 opacity-0 text-black duration-300 group-hover:opacity-100">
+                                    <h3 className="text-sm font-medium">{user.displayName}</h3>
+                                </div>
+                            </div>
+
+                    }
+
+
                 </div>
             </div>
         </div>

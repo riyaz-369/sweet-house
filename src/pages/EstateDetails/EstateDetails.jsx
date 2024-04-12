@@ -3,7 +3,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { BiArea } from "react-icons/bi";
 import { MdOutlineSell } from "react-icons/md";
 import { FaBath, FaBed } from "react-icons/fa";
-import { GiFloorHatch } from "react-icons/gi";
+import { GiFloorHatch, GiGreenhouse, GiSpookyHouse } from "react-icons/gi";
 import { GrElevator } from "react-icons/gr";
 import { SiLevelsdotfyi } from "react-icons/si";
 
@@ -31,7 +31,7 @@ const EstateDetails = () => {
                     <div className="space-y-3">
                         <h3 className="text-3xl font-medium mt-10 mb-5">Property Information</h3>
                         <p className="font-bold mt-12 flex items-center gap-1">
-                            <SlLocationPin />
+                            <GiGreenhouse />
                             Segment:
                             <span className="font-normal ml-1 opacity-90">
                                 {segment_name}
@@ -46,7 +46,7 @@ const EstateDetails = () => {
                         </p>
                         <div>
                             <p className="font-bold flex items-center gap-1">
-                                <BiArea />
+                                <GiSpookyHouse />
                                 Facilities:
                             </p>
                             <ul className="list-disc ml-10">

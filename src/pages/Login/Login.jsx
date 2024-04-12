@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaEye, FaEyeSlash, FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
@@ -36,7 +36,7 @@ const Login = () => {
                 .catch(error => {
                     const errorMsg = (error.code.slice(5, 12));
                     const err = (errorMsg.charAt(0).toUpperCase() + errorMsg.slice(1));
-                    toast.error(`Incorrect or ${err} password`);
+                    toast.error(`${err} account or password`);
                 });
             return
         }
@@ -71,7 +71,7 @@ const Login = () => {
                             <Link href="">Forget Password?</Link>
                         </div>
                     </div>
-                    <input className="btn btn-neutral w-full hover:text-white text-base" type="submit" value="LOG IN" />
+                    <input className="btn btn-neutral w-full hover:text-white" type="submit" value="LOG IN" />
                 </form>
 
                 {/* login with social account */}

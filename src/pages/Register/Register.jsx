@@ -35,18 +35,20 @@ const Register = () => {
         else {
             createUser(email, password)
                 .then(() => {
+                    toast.success("Registration Success !");
                     userProfile(name, photoURL)
                         .then(() => {
                             // navigate
                         })
-                    toast.success("Registration Success !");
+                        .catch(() => {
+                            // do something
+                        })
                 })
                 .catch(error => {
                     const errorMsg = (error.code.split("-").join(" ").slice(5, error.code.length));
                     const err = (errorMsg.charAt(0).toUpperCase() + errorMsg.slice(1));
                     toast.error(`This ${err}`);
                 });
-            return
         }
     }
 
@@ -93,7 +95,7 @@ const Register = () => {
                             {...register("conditions")} />
                         <p>Accept our <Link className="btn-link text-gray-800" href="">trams and conditions?</Link></p>
                     </div>
-                    <input className="btn btn-neutral w-full hover:text-white text-base" type="submit" value="REGISTER" />
+                    <input className="btn btn-neutral w-full hover:text-white" type="submit" value="REGISTER" />
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>

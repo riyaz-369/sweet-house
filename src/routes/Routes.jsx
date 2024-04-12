@@ -7,6 +7,7 @@ import Login from "../pages/Login/Login";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import EstateDetails from "../pages/EstateDetails/EstateDetails";
 import Register from "../pages/Register/Register";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/house-details/:id",
-                element: <EstateDetails />,
+                element: <PrivetRoute><EstateDetails /></PrivetRoute>,
                 loader: () => fetch("../houses.json")
             }
         ]

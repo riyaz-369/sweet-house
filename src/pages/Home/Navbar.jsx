@@ -5,11 +5,12 @@ import { MdContactMail } from "react-icons/md";
 import { FaUserEdit } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
 
-    const { user } = useContext(AuthContext);
-    console.log(user)
+    const { user, logOut } = useContext(AuthContext);
 
     const navLinks = <>
         <NavLink to='/'
@@ -35,6 +36,15 @@ const Navbar = () => {
         </NavLink>
     </>
 
+    const handleLogOut = () => {
+        logOut()
+        // .then(() => {
+        //     toast.success("Logout successful !")
+        // }).catch(() => {
+        //     toast.error("Something went wrong !")
+        // })
+    }
+
     return (
         <div>
             <div className="navbar">
@@ -55,32 +65,30 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end space-x-4">
-                    <Link>
-                        <button className="btn btn-neutral text-white text-base border-none rounded-md px-6">
-                            <CiLogin />
-                            Log Out
-                        </button>
-                    </Link>
-                    {
-                        !user ? <Link to="/login">
-                            <button className="btn btn-neutral text-white text-base border-none rounded-md px-6">
+                    {user ?
+                        <div className="flex gap-4">
+                            <button onClick={handleLogOut} className="btn btn-neutral text-white text-base border-none rounded-md px-4">
                                 <CiLogin />
-                                Log in
+                                Log Out
                             </button>
-                        </Link> :
-
                             <div className="relative inline-block group">
                                 <img src={user.photoURL} alt={user.displayName} className="w-11 rounded-full ring ring-offset-1 ring-neutral" />
                                 <div className="absolute top-13 left-1/2 -translate-x-1/2 opacity-0 text-black duration-300 group-hover:opacity-100">
                                     <h3 className="text-sm font-medium">{user.displayName}</h3>
                                 </div>
                             </div>
-
+                        </div>
+                        :
+                        <Link to="/login">
+                            <button className="btn btn-neutral text-white text-base border-none rounded-md px-4">
+                                <CiLogin />
+                                Log in
+                            </button>
+                        </Link>
                     }
-
-
                 </div>
             </div>
+            {/* <ToastContainer position="top-center" /> */}
         </div>
     );
 };

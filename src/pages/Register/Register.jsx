@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -10,8 +10,8 @@ const Register = () => {
 
     const { createUser, userProfile } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
-
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const navigate = useNavigate();
 
     const handleRegister = (data) => {
         const { name, email, photoURL, password, conditions } = data;
@@ -39,6 +39,7 @@ const Register = () => {
                     userProfile(name, photoURL)
                         .then(() => {
                             // navigate
+                            navigate("/profile");
                         })
                         .catch(() => {
                             // do something

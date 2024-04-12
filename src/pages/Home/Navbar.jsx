@@ -71,12 +71,14 @@ const Navbar = () => {
                                 <CiLogin />
                                 Log Out
                             </button>
-                            <div className="relative inline-block group">
-                                <img src={user.photoURL} alt={user.displayName} className="w-11 rounded-full ring ring-offset-1 ring-neutral" />
-                                <div className="absolute top-13 left-1/2 -translate-x-1/2 opacity-0 text-black duration-300 group-hover:opacity-100">
-                                    <h3 className="text-sm font-medium">{user.displayName}</h3>
+                            <NavLink to="/profile">
+                                <div className="relative inline-block group">
+                                    <img src={user.photoURL} alt={user.displayName} className="w-11 rounded-full ring ring-offset-1 ring-neutral" />
+                                    <div className="absolute top-12 left-12 -translate-x-1/2 opacity-0 text-black duration-300 group-hover:opacity-100 min-w-max">
+                                        <h3 className="text-sm font-medium text-center">{user.displayName}</h3>
+                                    </div>
                                 </div>
-                            </div>
+                            </NavLink>
                         </div>
                         :
                         <Link to="/login">

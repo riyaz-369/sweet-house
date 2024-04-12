@@ -8,6 +8,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import EstateDetails from "../pages/EstateDetails/EstateDetails";
 import Register from "../pages/Register/Register";
 import PrivetRoute from "./PrivetRoute";
+import Profile from "../pages/Profile/Profile";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "/update-profile",
                 element: <UpdateProfile />
+            },
+            {
+                path: "/profile",
+                element: <Profile />
             },
             {
                 path: "/login",

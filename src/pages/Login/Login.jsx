@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -11,6 +11,8 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const { signInUser, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors }, } = useForm();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleLogIn = (data) => {
         const email = data.email;
@@ -32,6 +34,7 @@ const Login = () => {
             signInUser(email, password)
                 .then(() => {
                     toast.success("Login success !")
+                    navigate(location?.state ? location.state : "/")
                 })
                 .catch(error => {
                     const errorMsg = (error.code.slice(5, 12));
@@ -45,18 +48,20 @@ const Login = () => {
     const handleGoogleLogin = () => {
         signInWithGoogle()
             .then(() => {
-                toast.success('Login success !')
+                toast.success('Login success !');
+                navigate(location?.state ? location.state : "/");
             }).catch((error) => {
-                console.log(error.message)
-            })
+                console.log(error.message);
+            });
     }
     const handleGithubLogin = () => {
         signInWithGitHub()
             .then(() => {
-                toast.success('Login success !')
+                toast.success('Login success !');
+                navigate(location?.state ? location.state : "/");
             }).catch((error) => {
-                console.log(error.message)
-            })
+                console.log(error.message);
+            });
     }
 
     return (

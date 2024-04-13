@@ -1,10 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import { CiLogin } from "react-icons/ci";
 import { IoHome } from "react-icons/io5";
-import { MdContactMail } from "react-icons/md";
 import { FaUserEdit } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { MdContactMail } from "react-icons/md";
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 

@@ -4,10 +4,11 @@ import { BiArea } from "react-icons/bi";
 import { MdOutlineSell } from "react-icons/md";
 import { CgMoreR } from "react-icons/cg";
 import { Link } from 'react-router-dom';
+import { GiGreenhouse } from 'react-icons/gi';
 
 const EstateCard = ({ house }) => {
 
-    const { image, estate_title, description, price, status, area, location, id } = house;
+    const { image, estate_title, description, price, status, area, location, segment_name, id } = house;
     const shortDes = description => {
         const splitTo = description.split(". ");
         return splitTo.slice(0, 1).join(". ") + ".";
@@ -21,6 +22,13 @@ const EstateCard = ({ house }) => {
                 <p className="text-base opacity-90">{shortDes(description)}</p>
                 <div className="my-3 space-y-2 border-t-2 border-dashed">
                     <p className="font-bold text-base mt-4 flex items-center gap-1">
+                        <GiGreenhouse />
+                        Segment:
+                        <span className="font-normal ml-1 opacity-90">
+                            {segment_name}
+                        </span>
+                    </p>
+                    <p className="font-bold text-base flex items-center gap-1">
                         <SlLocationPin />
                         Location:
                         <span className="font-normal ml-1 opacity-90">

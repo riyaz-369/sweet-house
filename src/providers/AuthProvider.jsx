@@ -31,7 +31,7 @@ const AuthProvider = ({ children }) => {
     const userProfile = (name, photoURL) => {
         setLoading(true);
         return updateProfile(auth.currentUser, {
-            displayName: name || "not found",
+            displayName: name || "username not found",
             photoURL: photoURL
         })
     }

@@ -33,8 +33,10 @@ const Login = () => {
         else {
             signInUser(email, password)
                 .then(() => {
-                    toast.success("Login success !");
-                    navigate(location?.state ? location.state : "/");
+                    toast.success('Login success !', { autoClose: 2500 });
+                    setTimeout(() => {
+                        navigate(location?.state ? location.state : "/");
+                    }, 3500);
                 })
                 .catch(error => {
                     const errorMsg = (error.code.slice(5, 12));
@@ -48,8 +50,10 @@ const Login = () => {
     const handleGoogleLogin = () => {
         signInWithGoogle()
             .then(() => {
-                toast.success('Login success !');
-                navigate(location?.state ? location.state : "/");
+                toast.success('Login success !', { autoClose: 2500 });
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : "/");
+                }, 3500)
             }).catch(() => {
                 toast.error("Something went wrong !");
             });
@@ -57,8 +61,10 @@ const Login = () => {
     const handleGithubLogin = () => {
         signInWithGitHub()
             .then(() => {
-                toast.success('Login success !');
-                navigate(location?.state ? location.state : "/");
+                toast.success('Login success !', { autoClose: 2500 });
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : "/");
+                }, 3500);
             }).catch((error) => {
                 console.log(error.message);
             });

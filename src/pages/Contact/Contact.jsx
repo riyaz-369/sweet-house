@@ -1,7 +1,13 @@
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 
 const Contact = () => {
+    const [submit, setSubmit] = useState(false);
 
+    const handleSubmit = () => {
+        toast.success("You'r successfully submit your feedback !");
+    }
     return (
         <section className="py-6 my-32 max-w-7xl mx-auto shadow-sm shadow-slate-200">
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
@@ -41,11 +47,16 @@ const Contact = () => {
                     </label>
                     <label className="block">
                         <span className="mb-1">Your Message</span>
-                        <textarea rows="4" className="block w-full rounded-md border-gray-300 border"></textarea>
+                        <textarea onChange={() => setSubmit(true)}
+                            rows="4" className="block w-full rounded-md border-gray-300 border">
+                        </textarea>
                     </label>
-                    <button type="button" className="btn bg-blue-600 hover:bg-blue-500 rounded-md w-full text-white hover:shadow-md border-none">Submit</button>
+                    <button onClick={handleSubmit} type="button" className="btn bg-blue-600 hover:bg-blue-500 rounded-md w-full text-white hover:shadow-md border-none" disabled={!submit}>
+                        Submit
+                    </button>
                 </form>
             </div>
+            <ToastContainer position="top-center" />
         </section>
     );
 };

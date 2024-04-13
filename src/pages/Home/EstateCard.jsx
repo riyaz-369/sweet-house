@@ -15,7 +15,7 @@ const EstateCard = ({ house }) => {
     }
 
     return (
-        <div className="card card-compact rounded-md shadow-md hover:shadow-lg hover:shadow-gray-400 transition-all transform hover:scale-105">
+        <div className="card card-compact mt-8 rounded-md shadow-md hover:shadow-lg hover:shadow-gray-400 transition-all transform hover:scale-105">
             <img className='rounded-t-md w-[400px] h-[256px]' src={image} alt={house.estate_title} />
             <div className="card-body">
                 <h2 className="card-title text-[22px]">{estate_title}</h2>

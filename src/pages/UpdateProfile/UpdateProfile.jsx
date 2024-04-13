@@ -28,7 +28,7 @@ const UpdateProfile = () => {
     }
 
     return (
-        <section className="max-w-4xl mx-auto my-12 shadow-md rounded-md">
+        <section className="max-w-4xl mx-auto my-12 shadow-md rounded-md bg-gray-50 bg-opacity-50">
             <form onSubmit={handleSubmit(handleUpdateProfile)}
                 className="flex flex-col mx-auto">
                 <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md">
@@ -40,7 +40,7 @@ const UpdateProfile = () => {
                         <div className="col-span-full sm:col-span-4">
                             <label className="text-base">Your Name</label>
                             <input id="name" type="text" placeholder="Full Name"
-                                className="w-full rounded-md border-gray-300 input"
+                                className="w-full rounded-md border-gray-300 bg-gray-50 bg-opacity-40 input"
                                 {...register("name")}
                                 onChange={() => setIsSave(true)}
                             />
@@ -49,7 +49,7 @@ const UpdateProfile = () => {
                             <label className="text-base">Profile Photo</label>
                             <div className="join w-full">
                                 <Link onClick={() => setChange(true)} className="btn btn-sm join-item rounded-l-md btn-neutral mb-2">Change</Link>
-                                <input className={`w-full join-item rounded-md mb-2 input-sm border bg-slate-50 ${change || 'hidden'}`}
+                                <input className={`w-full join-item rounded-md mb-2 input-sm border border-slate-300 bg-gray-50 bg-opacity-40 ${change || 'hidden'}`}
                                     type="text" placeholder="Enter Your Photo URL"
                                     {...register("photoURL")}
                                     onChange={() => setIsSave(true)}

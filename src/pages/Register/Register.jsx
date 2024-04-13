@@ -35,15 +35,17 @@ const Register = () => {
         else {
             createUser(email, password)
                 .then(() => {
-                    toast.success("Registration Success !");
+                    toast.success("Registration Success !", { autoClose: 2500 });
                     userProfile(name, photoURL)
                         .then(() => {
                             // navigate
-                            navigate("/profile");
+                            setTimeout(() => {
+                                navigate("/");
+                            }, 3000);
                         })
                         .catch(() => {
                             // do something
-                        })
+                        });
                 })
                 .catch(error => {
                     const errorMsg = (error.code.split("-").join(" ").slice(5, error.code.length));

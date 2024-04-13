@@ -1,5 +1,7 @@
 import Banner from "./Banner";
 import EstateSection from "./EstateSection";
+import OurClientSay from "./OurClientSay";
+import WhyChooseUs from "./WhyChooseUs";
 
 const Home = () => {
 
@@ -10,8 +12,14 @@ const Home = () => {
                     <Banner />
                 </div>
             </div>
-            <div className="my-16 mt-20 max-w-7xl mx-auto">
+            <div className="mt-20 max-w-7xl mx-auto">
                 <EstateSection />
+            </div>
+            <div className="mt-20 max-w-7xl mx-auto">
+                <WhyChooseUs />
+            </div>
+            <div className="my-16 mb-24 max-w-7xl mx-auto">
+                <OurClientSay />
             </div>
         </div>
     );

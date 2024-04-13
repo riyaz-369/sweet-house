@@ -5,8 +5,6 @@ import { FaUserEdit } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { MdContactMail } from "react-icons/md";
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
 
@@ -38,11 +36,11 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logOut()
-        // .then(() => {
-        //     toast.success("Logout successful !")
-        // }).catch(() => {
-        //     toast.error("Something went wrong !")
-        // })
+            .then(() => {
+                alert('Click ok for logout !');
+            }).catch(() => {
+                // do something with error
+            });
     }
 
     return (
@@ -57,7 +55,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost rounded-md text-3xl">Sweet House</a>
+                    <Link to="/" className="btn btn-ghost rounded-md text-3xl">Sweet House</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 space-x-2">
@@ -90,7 +88,6 @@ const Navbar = () => {
                     }
                 </div>
             </div>
-            {/* <ToastContainer position="top-center" /> */}
         </div>
     );
 };

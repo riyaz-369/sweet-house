@@ -67,14 +67,14 @@ const Navbar = () => {
                 <div className="navbar-end space-x-4">
                     {user ?
                         <div className="flex gap-4">
-                            <button onClick={handleLogOut} className="btn btn-neutral text-white text-base border-none rounded-md px-4">
+                            <button onClick={handleLogOut} className="btn btn-neutral text-white text-base border-none rounded-md px-4 hover:shadow-lg hover:shadow-slate-400">
                                 <CiLogin />
                                 Log Out
                             </button>
                             <NavLink to="/profile">
                                 <div className="relative inline-block group">
-                                    <img src={user.photoURL} alt={user.displayName} className="w-11 rounded-full ring ring-offset-1 ring-neutral" />
-                                    <div className="absolute top-[52px] bg-neutral -translate-x-1/2 opacity-0 text-white p-2 rounded-md duration-300 group-hover:opacity-100 min-w-max">
+                                    <img src={user.photoURL} alt={user.displayName} className="w-11 h-11 rounded-full ring ring-offset-1 ring-neutral" />
+                                    <div className="absolute top-[52px] bg-neutral -translate-x-1/2 opacity-0 text-white p-2 rounded-md duration-300 group-hover:opacity-100 min-w-max hover:shadow-md hover:shadow-slate-300">
                                         <h3 className="text-sm text-center">{user.displayName}</h3>
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@ const Navbar = () => {
                         </div>
                         :
                         <Link to="/login">
-                            <button className="btn btn-neutral text-white text-base border-none rounded-md px-4">
+                            <button className="btn btn-neutral text-white text-base border-none rounded-md px-4 hover:shadow-lg hover:shadow-slate-400">
                                 <CiLogin />
                                 Log in
                             </button>

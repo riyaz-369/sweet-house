@@ -14,7 +14,7 @@ const EstateCard = ({ house }) => {
     }
 
     return (
-        <div className="card card-compact rounded-md shadow-md hover:shadow-xl transition-all transform hover:scale-105 hover:bg-slate-50">
+        <div className="card card-compact rounded-md shadow-md hover:shadow-lg hover:shadow-gray-400 transition-all transform hover:scale-105">
             <img className='rounded-t-md w-[400px] h-[256px]' src={image} alt={house.estate_title} />
             <div className="card-body">
                 <h2 className="card-title text-[22px]">{estate_title}</h2>
@@ -49,7 +49,7 @@ const EstateCard = ({ house }) => {
                     <h3 className="font-bold text-xl">{price}</h3>
                 </div>
                 <Link to={`/house-details/${id}`}>
-                    <button className="btn bg-blue-600 hover:bg-blue-700 rounded-md w-full text-white">
+                    <button className="btn bg-blue-600 hover:bg-blue-500 rounded-md w-full text-white hover:shadow-md border-none">
                         <CgMoreR />
                         View Property
                     </button>

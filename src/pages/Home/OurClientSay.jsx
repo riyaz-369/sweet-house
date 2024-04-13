@@ -25,7 +25,7 @@ const OurClientSay = () => {
                         </div>
                     </div>
                     <div className="p-4 space-y-2 text-sm">
-                        <p>Choosing Sweet House for our real estate needs was one of the best decisions we made. Their team's knowledge of the local market, clear communication, and dedication to finding us the perfect home were truly impressive.</p>
+                        <p>Choosing Sweet House for our real estate needs was one of the best decisions we made. Their teams knowledge of the local market, clear communication, and dedication to finding us the perfect home were truly impressive.</p>
                         <p>Thank you for making our dreams a reality! - Jakson Lee.</p>
                     </div>
                 </div>

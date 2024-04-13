@@ -20,7 +20,9 @@
       "floors": 2,
       "elevators_in_building": false,
       "floor_level": "N/A"
-    }
+    },
+    "latitude": 37.7749,
+    "longitude": -122.4194
   },
   {
     "image": "https://i.ibb.co/qjkfCzV/lake-cottage-exterior.jpg",
@@ -43,7 +45,9 @@
       "floors": 1,
       "elevators_in_building": false,
       "floor_level": "N/A"
-    }
+    },
+    "latitude": 34.0522,
+    "longitude": -118.2437
   },
   {
     "image": "https://i.ibb.co/JRJ8gG1/1920-new-housing-on-the-way-for-people-in-need-in-kelowna.jpg",
@@ -71,7 +75,9 @@
       "floors": 1,
       "elevators_in_building": true,
       "floor_level": 6
-    }
+    },
+    "latitude": 40.7128,
+    "longitude": -74.006
   },
   {
     "image": "https://i.ibb.co/QPCpSjd/0ea45c7b-264a-4810-bbd1-335cddfdffea-0.jpg",
@@ -94,7 +100,9 @@
       "floors": 2,
       "elevators_in_building": false,
       "floor_level": "N/A"
-    }
+    },
+    "latitude": 34.0522,
+    "longitude": -118.2437
   },
   {
     "image": "https://i.ibb.co/rtcs978/image-1-1024x1024.webp",
@@ -117,7 +125,9 @@
       "floors": 1,
       "elevators_in_building": true,
       "floor_level": 5
-    }
+    },
+    "latitude": 40.7128,
+    "longitude": -74.006
   },
   {
     "image": "https://i.ibb.co/LnpSCTF/188936fc-z.jpg",
@@ -140,6 +150,8 @@
       "floors": 2,
       "elevators_in_building": false,
       "floor_level": "N/A"
-    }
+    },
+    "latitude": 39.7392,
+    "longitude": -104.9903
   }
 ]

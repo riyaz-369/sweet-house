@@ -6,6 +6,7 @@ import { FaBath, FaBed } from "react-icons/fa";
 import { GiFloorHatch, GiGreenhouse, GiSpookyHouse } from "react-icons/gi";
 import { GrElevator } from "react-icons/gr";
 import { SiLevelsdotfyi } from "react-icons/si";
+import LeafletMap from "./LeafletMap";
 
 const EstateDetails = () => {
 
@@ -28,51 +29,56 @@ const EstateDetails = () => {
                 <h2 className="card-title text-3xl">{estate_title}</h2>
                 <p className="opacity-90">{description}</p>
                 <div className="mt-8 space-y-2 border-t-2 border-dashed">
-                    <div className="space-y-3">
-                        <h3 className="text-3xl font-medium mt-10 mb-5">Property Information</h3>
-                        <p className="font-bold mt-12 flex items-center gap-1">
-                            <GiGreenhouse />
-                            Segment:
-                            <span className="font-normal ml-1 opacity-90">
-                                {segment_name}
-                            </span>
-                        </p>
-                        <p className="font-bold flex items-center gap-1">
-                            <SlLocationPin />
-                            Location:
-                            <span className="font-normal ml-1 opacity-90">
-                                {location}
-                            </span>
-                        </p>
-                        <div>
-                            <p className="font-bold flex items-center gap-1">
-                                <GiSpookyHouse />
-                                Facilities:
+                    <div className="flex items-center justify-between mt-10">
+                        <div className="space-y-3">
+                            <h3 className="text-3xl font-medium mb-5">Property Information</h3>
+                            <p className="font-bold mt-12 flex items-center gap-1">
+                                <GiGreenhouse />
+                                Segment:
+                                <span className="font-normal ml-1 opacity-90">
+                                    {segment_name}
+                                </span>
                             </p>
-                            <ul className="list-disc ml-10">
-                                <li>{facilities[0]}</li>
-                                <li>{facilities[1]}</li>
-                                <li>{facilities[2]}</li>
-                            </ul>
+                            <p className="font-bold flex items-center gap-1">
+                                <SlLocationPin />
+                                Location:
+                                <span className="font-normal ml-1 opacity-90">
+                                    {location}
+                                </span>
+                            </p>
+                            <div>
+                                <p className="font-bold flex items-center gap-1">
+                                    <GiSpookyHouse />
+                                    Facilities:
+                                </p>
+                                <ul className="list-disc ml-10">
+                                    <li>{facilities[0]}</li>
+                                    <li>{facilities[1]}</li>
+                                    <li>{facilities[2]}</li>
+                                </ul>
+                            </div>
+                            <p className="font-bold flex items-center gap-1">
+                                <BiArea />
+                                Area:
+                                <span className="font-normal opacity-90">
+                                    {area}
+                                </span>
+                            </p>
+                            <p className="font-semibold flex items-center gap-1">
+                                <MdOutlineSell />
+                                For
+                                <span
+                                    className="font-normal opacity-90">
+                                    {status}
+                                </span>
+                            </p>
+                            <div>
+                                <h3 className="font-bold text-2xl">{price}</h3>
+                            </div>
+
                         </div>
-                        <p className="font-bold flex items-center gap-1">
-                            <BiArea />
-                            Area:
-                            <span className="font-normal opacity-90">
-                                {area}
-                            </span>
-                        </p>
-                        <p className="font-semibold flex items-center gap-1">
-                            <MdOutlineSell />
-                            For
-                            <span
-                                className="font-normal opacity-90">
-                                {status}
-                            </span>
-                        </p>
-                        <div>
-                            <h3 className="font-bold text-2xl">{price}</h3>
-                        </div>
+                        {/* react leaflet map */}
+                        <LeafletMap house={house} />
                     </div>
                 </div>
 

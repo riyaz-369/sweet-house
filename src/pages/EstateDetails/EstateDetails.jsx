@@ -7,8 +7,19 @@ import { GiFloorHatch, GiGreenhouse, GiSpookyHouse } from "react-icons/gi";
 import { GrElevator } from "react-icons/gr";
 import { SiLevelsdotfyi } from "react-icons/si";
 import LeafletMap from "./LeafletMap";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const EstateDetails = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 600,
+            easing: 'ease-in-out',
+            offset: 200,
+        })
+    }, [])
 
     const houses = useLoaderData()
     const { id } = useParams()
@@ -17,15 +28,15 @@ const EstateDetails = () => {
     const { image, image1, image2, image3, image4, estate_title, segment_name, description, price, status, area, location, facilities, features } = house;
 
     return (
-        <div className="card rounded-md max-w-7xl mx-auto p-4 my-12 shadow-xl">
+        <div data-aos="fade-up" className="card rounded-md max-w-7xl mx-auto p-4 my-12 shadow-md">
             <img className='rounded-md h-[550px]' src={image} alt={house.estate_title} />
-            <div className="relative flex gap-3 py-6 overflow-x-auto">
+            <div data-aos="fade-left" className="relative flex gap-3 py-6 overflow-x-auto">
                 <img className="h-48 aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image1} alt={estate_title} />
                 <img className="h-48 aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image2} alt={estate_title} />
                 <img className="h-48 aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image3} alt={estate_title} />
                 <img className="h-48 aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image4} alt={estate_title} />
             </div>
-            <div className="card-body">
+            <div data-aos="fade-up" className="card-body">
                 <h2 className="card-title text-3xl">{estate_title}</h2>
                 <p className="opacity-90">{description}</p>
                 <div className="mt-8 space-y-2 border-t-2 border-dashed">

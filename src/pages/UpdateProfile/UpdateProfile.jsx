@@ -3,8 +3,19 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const UpdateProfile = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            offset: 200,
+        })
+    }, [])
 
     const [change, setChange] = useState(false);
     const [isSave, setIsSave] = useState(false);
@@ -28,15 +39,15 @@ const UpdateProfile = () => {
     }
 
     return (
-        <section className="max-w-4xl mx-auto my-12 shadow-md rounded-md bg-gray-50 bg-opacity-50">
+        <section data-aos="fade-up" className="max-w-4xl mx-auto my-12 bg-gray-100 rounded-md">
             <form onSubmit={handleSubmit(handleUpdateProfile)}
                 className="flex flex-col mx-auto">
-                <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md">
-                    <div className="space-y-2 col-span-full lg:col-span-1">
+                <fieldset className="grid grid-cols-4 gap-2 rounded-md">
+                    <div data-aos="fade-right" className="space-y-2 col-span-full lg:col-span-1 bg-neutral bg-opacity-90 text-white p-6 lg:rounded-l-md">
                         <p className="font-medium text-xl">Profile</p>
                         <p className="text-sm opacity-80">Update your profile</p>
                     </div>
-                    <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+                    <div data-aos="fade-left" className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 p-8">
                         <div className="col-span-full sm:col-span-4">
                             <label className="text-base">Your Name</label>
                             <input id="name" type="text" placeholder="Full Name"
@@ -48,7 +59,7 @@ const UpdateProfile = () => {
                         <div className="col-span-full sm:col-span-4">
                             <label className="text-base">Profile Photo</label>
                             <div className="join w-full">
-                                <Link onClick={() => setChange(true)} className="btn btn-sm join-item rounded-l-md btn-neutral mb-2">Change</Link>
+                                <Link onClick={() => setChange(true)} className="btn btn-sm btn-outline join-item rounded-l-md mb-2">Change</Link>
                                 <input className={`w-full join-item rounded-md mb-2 input-sm border border-slate-300 bg-gray-50 bg-opacity-40 ${change || 'hidden'}`}
                                     type="text" placeholder="Enter Your Photo URL"
                                     {...register("photoURL")}
@@ -68,7 +79,7 @@ const UpdateProfile = () => {
                             </button>
                         </div>
                         <Link to="/profile"
-                            className="btn btn-neutral text-white text-base border-none rounded-md px-4 hover:shadow-lg hover:shadow-slate-400">
+                            className="btn btn-outline text-base rounded-md px-4 hover:shadow-lg hover:shadow-slate-400">
                             Cancel
                         </Link>
                     </div>

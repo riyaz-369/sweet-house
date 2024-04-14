@@ -1,17 +1,28 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Contact = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            offset: 200,
+        })
+    }, [])
+
     const [submit, setSubmit] = useState(false);
 
     const handleSubmit = () => {
         toast.success("You'r successfully submit your feedback !");
     }
     return (
-        <section className="py-6 my-32 max-w-7xl mx-auto shadow-sm shadow-slate-200">
+        <section data-aos="fade-up" className="py-6 my-24 max-w-7xl mx-auto shadow-sm shadow-slate-200 bg-neutral rounded-md">
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-                <div className="py-6 md:py-0 md:px-6">
+                <div data-aos="fade-right" className="py-6 md:py-0 md:px-6 text-white text-opacity-80">
                     <h1 className="text-4xl font-bold">Get in touch</h1>
                     <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
                     <div className="space-y-4">
@@ -36,12 +47,12 @@ const Contact = () => {
                         </p>
                     </div>
                 </div>
-                <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
-                    <label className="input input-bordered flex items-center gap-2">
+                <form data-aos="fade-left" noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+                    <label className="input input-bordered flex items-center gap-2 rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" /></svg>
-                        <input type="text" className="grow" placeholder="Full Name" />
+                        <input type="text" className="grow bg-neutral" placeholder="Full Name" />
                     </label>
-                    <label className="input input-bordered flex items-center gap-2">
+                    <label className="input input-bordered flex items-center gap-2 rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" /><path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
                         <input type="Email" className="grow" placeholder="Email Address" />
                     </label>
@@ -51,7 +62,7 @@ const Contact = () => {
                             rows="4" className="block w-full rounded-md border-gray-300 border">
                         </textarea>
                     </label>
-                    <button onClick={handleSubmit} type="button" className="btn bg-blue-600 hover:bg-blue-500 rounded-md w-full text-white hover:shadow-md border-none" disabled={!submit}>
+                    <button onClick={handleSubmit} type="button" className="btn bg-blue-600 hover:bg-blue-500 rounded-md w-full text-white hover:shadow-md border-none disabled:bg-slate-400" disabled={!submit}>
                         Submit
                     </button>
                 </form>

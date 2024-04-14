@@ -2,13 +2,25 @@ import Banner from "./Banner";
 import EstateSection from "./EstateSection";
 import OurClientSay from "./OurClientSay";
 import WhyChooseUs from "./WhyChooseUs";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Home = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 600,
+            easing: 'ease-in-out',
+            offset: 200,
+        })
+    }, [])
 
     return (
         <div className="font-lato">
             <div className="mt-12 bg-base-200 bg-opacity-35">
-                <div className="max-w-7xl mx-auto">
+                <div data-aos="fade-up"
+                    className="max-w-7xl mx-auto">
                     <Banner />
                 </div>
             </div>

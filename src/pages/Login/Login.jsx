@@ -5,8 +5,20 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../../providers/AuthProvider";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 
 const Login = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 600,
+            easing: 'ease-in-out',
+            offset: 200,
+        })
+    }, [])
 
     const [showPassword, setShowPassword] = useState(false);
     const { signInUser, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
@@ -71,7 +83,10 @@ const Login = () => {
     }
 
     return (
-        <div className="max-w-7xl flex justify-around items-center mx-auto my-12">
+        <div data-aos="fade-left" className="max-w-7xl flex justify-around items-center mx-auto mt-12 mb-36">
+            <Helmet>
+                <title>Sweet House/Login</title>
+            </Helmet>
             <div className="min-w-[500px] p-8 space-y-3 shadow-md hover:shadow-xl transition-all rounded-md dark:bg-gray-50 dark:text-gray-800">
                 <h1 className="text-3xl font-semibold mb-8 text-center">Login your account</h1>
                 <form onSubmit={handleSubmit(handleLogIn)}

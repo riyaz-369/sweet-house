@@ -10,6 +10,7 @@ import LeafletMap from "./LeafletMap";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 
 const EstateDetails = () => {
 
@@ -29,6 +30,10 @@ const EstateDetails = () => {
 
     return (
         <div data-aos="fade-up" className="card rounded-md max-w-7xl mx-auto p-4 my-12 shadow-md">
+            <Helmet>
+                <title>{estate_title}</title>
+                <meta name="description" content={description} />
+            </Helmet>
             <img className='rounded-md h-[550px]' src={image} alt={house.estate_title} />
             <div data-aos="fade-left" className="relative flex gap-3 py-6 overflow-x-auto">
                 <img className="h-48 aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image1} alt={estate_title} />

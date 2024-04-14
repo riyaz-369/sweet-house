@@ -3,6 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
 
@@ -21,6 +22,9 @@ const Contact = () => {
     }
     return (
         <section data-aos="fade-up" className="py-6 my-24 max-w-7xl mx-auto shadow-sm shadow-slate-200 bg-neutral rounded-md">
+            <Helmet>
+                <title>Sweet House/Contact</title>
+            </Helmet>
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                 <div data-aos="fade-right" className="py-6 md:py-0 md:px-6 text-white text-opacity-80">
                     <h1 className="text-4xl font-bold">Get in touch</h1>
@@ -57,7 +61,7 @@ const Contact = () => {
                         <input type="Email" className="grow" placeholder="Email Address" />
                     </label>
                     <label className="block">
-                        <span className="mb-1">Your Message</span>
+                        <span className="mb-1 text-white">Your Message</span>
                         <textarea onChange={() => setSubmit(true)}
                             rows="4" className="block w-full rounded-md border-gray-300 border">
                         </textarea>

@@ -8,7 +8,9 @@
 - #### [swiper js - slide](https://swiperjs.com/)
 - #### [react-hook-form](https://react-hook-form.com/)
 - #### [react-leaflet](https://react-leaflet.js.org/)
+- #### [aos-animate](https://www.npmjs.com/package/aos)
 
+- #### [react-helmet](https://www.npmjs.com/package/react-helmet)
 - #### [react-prop-types](https://www.npmjs.com/package/prop-types)
 - #### [react-icon](https://react-icons.github.io/react-icons/)
 - #### [react-toastify](https://fkhadra.github.io/react-toastify/installation/)

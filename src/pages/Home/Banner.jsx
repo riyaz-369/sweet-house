@@ -9,6 +9,7 @@ import studentHouse from "../../assets/student.jpeg"
 import { CgMoreR } from "react-icons/cg";
 
 const Banner = () => {
+
     return (
         <div>
             <Swiper
@@ -45,8 +46,8 @@ const Banner = () => {
                                             Welcome to your bespoke haven, where elegance seamlessly blends with comfort in every detail. From the carefully crafted architecture to the serene ambiance, this sanctuary is tailored just for you. Step into a world of luxury and tranquility, where every element reflects your unique style and taste.</p>
                                         <button
                                             className="btn btn-outline text-white text-base hover:bg-white hover:text-black rounded-md px-6">
-                                           <CgMoreR/>
-                                           Visit More
+                                            <CgMoreR />
+                                            Visit More
                                         </button>
                                     </div>
                                 </div>
@@ -66,8 +67,8 @@ const Banner = () => {
                                         <p className="mb-5 text-white lg:max-w-md text-sm opacity-80">Embrace sleek design and spacious living in this stunning modern single-family house. With clean lines, abundant natural light, and thoughtful amenities, it is the perfect blend of style and functionality for contemporary living. Welcome to your oasis of modern comfort.</p>
                                         <button
                                             className="btn btn-outline text-white text-base hover:bg-white hover:text-black rounded-md px-6">
-                                           <CgMoreR/>
-                                           Visit More
+                                            <CgMoreR />
+                                            Visit More
                                         </button>
                                     </div>
                                 </div>
@@ -86,7 +87,7 @@ const Banner = () => {
                                         <p className="mb-5 text-white lg:max-w-md text-sm opacity-80">Welcome to your student sanctuary, designed with your academic journey and social life in mind. This vibrant house offers a perfect balance of comfort and functionality, with ample space for studying, relaxing, and making memories with friends. Embrace the excitement of university life in your new home away from home.</p>
                                         <button
                                             className="btn btn-outline text-white text-base hover:bg-white hover:text-black rounded-md px-6">
-                                            <CgMoreR/>
+                                            <CgMoreR />
                                             Visit More
                                         </button>
                                     </div>

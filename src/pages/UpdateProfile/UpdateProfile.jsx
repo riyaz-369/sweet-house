@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
 
@@ -40,6 +41,9 @@ const UpdateProfile = () => {
 
     return (
         <section data-aos="fade-up" className="max-w-4xl mx-auto my-12 bg-gray-100 rounded-md">
+            <Helmet>
+                <title>Sweet House/Update Profile</title>
+            </Helmet>
             <form onSubmit={handleSubmit(handleUpdateProfile)}
                 className="flex flex-col mx-auto">
                 <fieldset className="grid grid-cols-4 gap-2 rounded-md">

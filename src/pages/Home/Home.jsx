@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Banner from "./Banner";
 import EstateSection from "./EstateSection";
 import OurClientSay from "./OurClientSay";
@@ -18,6 +19,9 @@ const Home = () => {
 
     return (
         <div className="font-lato">
+            <Helmet>
+                <title>Home - Sweet House</title>
+            </Helmet>
             <div className="mt-12 bg-base-200 bg-opacity-35">
                 <div data-aos="fade-up"
                     className="max-w-7xl mx-auto">

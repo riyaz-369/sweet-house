@@ -68,11 +68,11 @@ const Register = () => {
     }
 
     return (
-        <div data-aos="fade-left" className="max-w-7xl flex justify-around items-center mx-auto mt-12 mb-36">
+        <div data-aos="fade-right" className="md:max-w-lg lg:max-w-7xl mx-auto mt-12 mb-24 lg:flex items-center justify-between">
             <Helmet>
                 <title>Sweet House/Register</title>
             </Helmet>
-            <div className="min-w-[500px] p-8 space-y-3 shadow-md hover:shadow-xl transition-all rounded-md dark:bg-gray-50 dark:text-gray-800">
+            <div className="md:min-w-[500px] p-8 space-y-3 shadow-md hover:shadow-xl transition-all rounded-md dark:bg-gray-50 dark:text-gray-800">
                 <h1 className="text-3xl font-semibold mb-8 text-center">Register Now</h1>
                 <form onSubmit={handleSubmit(handleRegister)}
                     className="space-y-4">
@@ -102,7 +102,7 @@ const Register = () => {
                             className="w-full input input-bordered px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
                             {...register("password", { required: true })} />
                         <div onClick={() => setShowPassword(!showPassword)}
-                            className="text-lg absolute -translate-y-9 translate-x-[400px]">
+                            className="text-lg absolute -translate-y-9 translate-x-64 md:translate-x-[400px]">
                             {showPassword ? <FaEye /> : <FaEyeSlash />}
                         </div>
                         {errors.password && <span className="text-sm text-red-500">Password is required</span>}
@@ -128,7 +128,7 @@ const Register = () => {
                 </p>
             </div>
             <div>
-                <h2 className="text-4xl font-semibold">Register your account to <br /> access.</h2>
+                <h2 className="hidden md:hidden lg:flex text-4xl font-semibold">Register your account to <br /> access.</h2>
             </div>
             <ToastContainer position="top-center" />
         </div>

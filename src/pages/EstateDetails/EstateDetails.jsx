@@ -29,25 +29,25 @@ const EstateDetails = () => {
     const { image, image1, image2, image3, image4, estate_title, segment_name, description, price, status, area, location, facilities, features } = house;
 
     return (
-        <div data-aos="fade-up" className="card rounded-md max-w-7xl mx-auto p-4 my-12 shadow-md">
+        <div data-aos="fade-up" className="card rounded-md max-w-7xl mx-auto p-4 md:my-12 shadow-md">
             <Helmet>
                 <title>{estate_title}</title>
                 <meta name="description" content={description} />
             </Helmet>
-            <img className='rounded-md h-[550px]' src={image} alt={house.estate_title} />
-            <div data-aos="fade-left" className="relative flex gap-3 py-6 overflow-x-auto">
-                <img className="h-48 aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image1} alt={estate_title} />
-                <img className="h-48 aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image2} alt={estate_title} />
-                <img className="h-48 aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image3} alt={estate_title} />
-                <img className="h-48 aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image4} alt={estate_title} />
+            <img className='rounded-md lg:h-[550px]' src={image} alt={house.estate_title} />
+            <div data-aos="fade-left" className="relative flex gap-1 md:gap-3 mt-2 md:mt-5 overflow-x-auto">
+                <img className="h-24 md:h-48  aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image1} alt={estate_title} />
+                <img className="h-24 md:h-48  aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image2} alt={estate_title} />
+                <img className="h-24 md:h-48  aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image3} alt={estate_title} />
+                <img className="h-24 md:h-48  aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image4} alt={estate_title} />
             </div>
             <div data-aos="fade-up" className="card-body">
-                <h2 className="card-title text-3xl">{estate_title}</h2>
-                <p className="opacity-90">{description}</p>
-                <div className="mt-8 space-y-2 border-t-2 border-dashed">
-                    <div className="flex items-center justify-between mt-10">
-                        <div className="space-y-3">
-                            <h3 className="text-3xl font-medium mb-5">Property Information</h3>
+                <h2 className="card-title text-2xl md:text-3xl">{estate_title}</h2>
+                <p className="text-[13px] md:text-base opacity-90">{description}</p>
+                <div className="mt-5 md:mt-8 space-y-2 border-t-2 border-dashed">
+                    <div className="lg:flex items-center justify-between mt-5 md:mt-10">
+                        <div className="space-y-3 mb-5 lg:mb-0">
+                            <h3 className="text-2xl md:text-3xl font-medium mb-5">Property Information</h3>
                             <p className="font-bold mt-12 flex items-center gap-1">
                                 <GiGreenhouse />
                                 Segment:
@@ -99,8 +99,8 @@ const EstateDetails = () => {
                 </div>
 
                 {/* features */}
-                <h3 className="text-3xl font-medium mt-10 mb-5">Features</h3>
-                <div className="stats stats-vertical lg:stats-horizontal shadow">
+                <h3 className="text-2xl md:text-3xl font-medium mt-10 mb-5">Features</h3>
+                <div className="stats stats-vertical md:stats-horizontal shadow">
                     <div className="stat">
                         <div className="stat-title font-semibold flex justify-center text-2xl"><FaBed /></div>
                         <div className="stat-title font-semibold text-center text-2xl">Bedrooms</div>

@@ -51,7 +51,7 @@ const UpdateProfile = () => {
                         <p className="font-medium text-xl">Profile</p>
                         <p className="text-sm opacity-80">Update your profile</p>
                     </div>
-                    <div data-aos="fade-left" className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 p-8">
+                    <div data-aos="fade-up" className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 p-8">
                         <div className="col-span-full sm:col-span-4">
                             <label className="text-base">Your Name</label>
                             <input id="name" type="text" placeholder="Full Name"
@@ -63,7 +63,7 @@ const UpdateProfile = () => {
                         <div className="col-span-full sm:col-span-4">
                             <label className="text-base">Profile Photo</label>
                             <div className="join w-full">
-                                <Link onClick={() => setChange(true)} className="btn btn-sm btn-outline join-item rounded-l-md mb-2">Change</Link>
+                                <Link onClick={() => setChange(true)} className="btn btn-sm bg-lime-400 hover:bg-lime-300 join-item rounded-l-md mb-2">Change</Link>
                                 <input className={`w-full join-item rounded-md mb-2 input-sm border border-slate-300 bg-gray-50 bg-opacity-40 ${change || 'hidden'}`}
                                     type="text" placeholder="Enter Your Photo URL"
                                     {...register("photoURL")}
@@ -74,16 +74,16 @@ const UpdateProfile = () => {
                                 <img className="rounded-md min-w-full" src={user.photoURL} />
                             </div>
                         </div>
-                        <div className="col-span-full sm:col-span-4">
+                        <div className="sm:col-span-4">
                             <button
-                                className="btn rounded-md px-4 text-base bg-blue-600 transition-all hover:bg-blue-500
+                                className="btn rounded-md px-8 md:px-4 text-base bg-blue-600 transition-all hover:bg-blue-500
                                  text-white hover:shadow-md hover:shadow-slate-400 border-none w-full"
                                 disabled={!isSave}>
                                 Save
                             </button>
                         </div>
                         <Link to="/profile"
-                            className="btn btn-outline text-base rounded-md px-4 hover:shadow-lg hover:shadow-slate-400">
+                            className="btn ml-8 md:ml-0 bg-lime-400 hover:bg-lime-300 text-base rounded-md px-8 md:px-4 hover:shadow-lg">
                             Cancel
                         </Link>
                     </div>

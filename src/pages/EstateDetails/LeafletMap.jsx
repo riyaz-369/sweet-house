@@ -10,7 +10,7 @@ const LeafletMap = ({ house }) => {
         <MapContainer center={[latitude, longitude]} zoom={13} scrollWheelZoom={false} style={{ height: "350px", width: "60%" }}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                attribution=' <a href=""></a>'
             />
             <Marker position={[latitude, longitude]}>
                 <Popup>

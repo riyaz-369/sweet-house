@@ -2,10 +2,10 @@ const OurClientSay = () => {
 
     return (
         <div>
-            <h2 data-aos="fade-up" className="text-4xl font-medium text-center">What Our Client Says</h2>
-            <div data-aos="fade-up" className="grid grid-cols-2 gap-12 mt-12">
+            <h2 data-aos="fade-up" className="text-xl md:text-3xl lg:text-4xl font-medium text-center">What Our Client Says</h2>
+            <div data-aos="fade-up" className="grid md:grid-cols-2 gap-6 lg:gap-12 mt-4 md:mt-12">
                 <div data-aos="fade-right">
-                    <div className="container flex flex-col w-full max-w-2xl p-8 divide-y rounded-md shadow-md transition-all hover:shadow-lg hover:shadow-slate-400 hover:scale-110 hover:bg-neutral hover:text-white hover:text-opacity-80">
+                    <div className="container flex flex-col max-w-2xl p-6 md:p-6 lg:p-8 divide-y rounded-md shadow-md transition-all hover:shadow-lg hover:shadow-slate-400 lg:hover:scale-110 hover:bg-neutral hover:text-white hover:text-opacity-80">
                         <div className="flex justify-between p-4">
                             <div className="flex space-x-4">
                                 <div>
@@ -29,8 +29,8 @@ const OurClientSay = () => {
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-left">
-                    <div className="container flex flex-col w-full max-w-2xl p-6 divide-y bg-blue-50 rounded-md shadow-md transition-all hover:shadow-lg hover:shadow-slate-400 hover:scale-110 hover:bg-neutral hover:text-white hover:text-opacity-80">
+                <div data-aos="fade-up">
+                    <div className="container flex flex-col w-full max-w-2xl p-6 divide-y bg-blue-50 rounded-md shadow-md transition-all hover:shadow-lg hover:shadow-slate-400 lg:hover:scale-110 hover:bg-neutral hover:text-white hover:text-opacity-80">
                         <div className="flex justify-between p-4">
                             <div className="flex space-x-4">
                                 <div>
@@ -55,7 +55,7 @@ const OurClientSay = () => {
                     </div>
                 </div>
                 <div data-aos="fade-right">
-                    <div className="container flex flex-col w-full max-w-2xl bg-orange-50 p-6 divide-y rounded-md shadow-md transition-all hover:shadow-lg hover:shadow-slate-400 hover:scale-110 hover:bg-neutral hover:text-white hover:text-opacity-80">
+                    <div className="container flex flex-col w-full max-w-2xl bg-orange-50 p-6 md:p-4 lg:p-6 divide-y rounded-md shadow-md transition-all hover:shadow-lg hover:shadow-slate-400 lg:hover:scale-110 hover:bg-neutral hover:text-white hover:text-opacity-80">
                         <div className="flex justify-between p-4">
                             <div className="flex space-x-4">
                                 <div>
@@ -79,8 +79,8 @@ const OurClientSay = () => {
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-left">
-                    <div className="container flex flex-col w-full max-w-2xl p-6 divide-y rounded-md shadow-md transition-all hover:shadow-lg hover:shadow-slate-400 hover:scale-110 hover:bg-neutral hover:text-white hover:text-opacity-80">
+                <div data-aos="fade-up">
+                    <div className="container flex flex-col w-full max-w-2xl p-6 divide-y rounded-md shadow-md transition-all hover:shadow-lg hover:shadow-slate-400 lg:hover:scale-110 hover:bg-neutral hover:text-white hover:text-opacity-80">
                         <div className="flex justify-between p-4">
                             <div className="flex space-x-4">
                                 <div>

@@ -18,12 +18,12 @@ const Profile = () => {
     }, [])
 
     return (
-        <div className="max-w-4xl mx-auto my-12 flex justify-end">
+        <div className="max-w-4xl mx-auto my-12 lg:flex justify-end">
             <Helmet>
                 <title>Sweet House/Profile</title>
             </Helmet>
-            <div data-aos="fade-left"
-                className="p-6 min-w-[500px] h-[550px] shadow-md rounded-sm sm:px-12 bg-gray-50 hover:bg-gray-100 transition-all hover:scale-105 hover:shadow-lg">
+            <div data-aos="fade-up"
+                className="p-6 md:min-w-[500px] h-[550px] shadow-md rounded-sm sm:px-12 bg-gray-50 hover:bg-gray-100 transition-all hover:scale-105 hover:shadow-lg">
                 <img src={user.photoURL} alt="" className="w-32 rounded-full transition-all shadow-xl hover:shadow-slate-400 aspect-square ring-4 ring-blue-600 ring-offset-2" />
                 <div className="space-y-4 mt-6">
                     <div className="my-2 space-y-1">

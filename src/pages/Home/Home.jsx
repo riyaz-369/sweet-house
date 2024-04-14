@@ -18,23 +18,23 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="font-lato">
+        <div className="font-lato p-2 md:p-0">
             <Helmet>
                 <title>Home - Sweet House</title>
             </Helmet>
-            <div className="mt-12 bg-base-200 bg-opacity-35">
+            <div className="mt-6 md:mt-12 bg-base-200 bg-opacity-35">
                 <div data-aos="fade-up"
                     className="max-w-7xl mx-auto">
                     <Banner />
                 </div>
             </div>
-            <div className="mt-20 max-w-7xl mx-auto">
+            <div className="mt-16 md:mt-20 max-w-7xl mx-auto">
                 <EstateSection />
             </div>
             <div className="mt-20 max-w-7xl mx-auto">
                 <WhyChooseUs />
             </div>
-            <div className="my-16 mb-24 max-w-7xl mx-auto">
+            <div className="my-16 md:mb-24 max-w-7xl mx-auto">
                 <OurClientSay />
             </div>
         </div>

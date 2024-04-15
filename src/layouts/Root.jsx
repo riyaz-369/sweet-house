@@ -17,7 +17,9 @@ const Root = () => {
                     <Navbar />
                 </div>
             </div>
-            <Outlet />
+            <div className=" p-2 lg:p-0">
+                <Outlet />
+            </div>
             <div>
                 <Footer />
             </div>

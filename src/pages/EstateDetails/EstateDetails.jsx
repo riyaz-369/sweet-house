@@ -29,13 +29,13 @@ const EstateDetails = () => {
     }, []);
 
     return (
-        <div data-aos="fade-up" className="card rounded-md max-w-7xl mx-auto p-4 md:my-12 shadow-md">
+        <div data-aos="fade-up" className="card rounded-md max-w-7xl mx-auto p-4 mb-12 md:my-12 shadow-md">
             <Helmet>
                 <title>{estate_title}</title>
                 <meta name="description" content={description} />
             </Helmet>
             <img className='rounded-md lg:h-[550px]' src={image} alt={house.estate_title} />
-            <div data-aos="fade-left" className="relative flex gap-1 md:gap-3 mt-2 md:mt-5 overflow-x-auto">
+            <div data-aos="fade-right" className="relative flex gap-1 md:gap-3 mt-2 md:mt-5 overflow-x-auto">
                 <img className="h-24 md:h-48  aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image1} alt={estate_title} />
                 <img className="h-24 md:h-48  aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image2} alt={estate_title} />
                 <img className="h-24 md:h-48  aspect-video rounded-md object-cover object-center dark:bg-gray-500" src={image3} alt={estate_title} />

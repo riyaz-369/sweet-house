@@ -18,7 +18,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="font-lato p-2 md:p-0">
+        <div className="font-lato">
             <Helmet>
                 <title>Home - Sweet House</title>
             </Helmet>

@@ -15,7 +15,7 @@ const Profile = () => {
             easing: 'ease-in-out',
             offset: 200,
         })
-    }, [])
+    }, []);
 
     return (
         <div className="max-w-4xl mx-auto my-12 lg:flex justify-end">

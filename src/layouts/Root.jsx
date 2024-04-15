@@ -1,8 +1,15 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../pages/Home/Navbar";
 import Footer from "../pages/Footer";
+import { useEffect } from "react";
 
 const Root = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname])
+
     return (
         <div>
             <div className="bg-base-200 bg-opacity-35">

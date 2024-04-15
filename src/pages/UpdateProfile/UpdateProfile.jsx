@@ -10,14 +10,6 @@ import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
 
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            offset: 200,
-        })
-    }, [])
-
     const [change, setChange] = useState(false);
     const [isSave, setIsSave] = useState(false);
     const { user, userProfile } = useContext(AuthContext);
@@ -25,9 +17,10 @@ const UpdateProfile = () => {
     const navigate = useNavigate();
 
     const handleUpdateProfile = (data) => {
-        const { name, photoURL } = data;
 
-        userProfile(name, photoURL)
+        const { fullName, profileImg } = data;
+
+        userProfile(fullName, profileImg)
             .then(() => {
                 toast.success('Your profile updated successfully.', { autoClose: 2500 });
                 setTimeout(() => {
@@ -38,6 +31,14 @@ const UpdateProfile = () => {
                 toast.error(errorMsg);
             })
     }
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            offset: 200,
+        })
+    }, []);
 
     return (
         <section data-aos="fade-up" className="max-w-4xl mx-auto my-12 bg-gray-100 rounded-md">
@@ -56,7 +57,7 @@ const UpdateProfile = () => {
                             <label className="text-base">Your Name</label>
                             <input id="name" type="text" placeholder="Full Name"
                                 className="w-full rounded-md border-gray-300 bg-gray-50 bg-opacity-40 input"
-                                {...register("name")}
+                                {...register("fullName")} defaultValue={user.displayName}
                                 onChange={() => setIsSave(true)}
                             />
                         </div>
@@ -66,7 +67,7 @@ const UpdateProfile = () => {
                                 <Link onClick={() => setChange(true)} className="btn btn-sm bg-lime-400 hover:bg-lime-300 join-item rounded-l-md mb-2">Change</Link>
                                 <input className={`w-full join-item rounded-md mb-2 input-sm border border-slate-300 bg-gray-50 bg-opacity-40 ${change || 'hidden'}`}
                                     type="text" placeholder="Enter Your Photo URL"
-                                    {...register("photoURL")}
+                                    {...register("profileImg")} defaultValue={user.photoURL}
                                     onChange={() => setIsSave(true)}
                                 />
                             </div>

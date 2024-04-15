@@ -14,19 +14,19 @@ import { Helmet } from "react-helmet";
 
 const EstateDetails = () => {
 
+    const houses = useLoaderData()
+    const { id } = useParams()
+    const idToInt = parseInt(id);
+    const house = houses.find(house => house.id === idToInt)
+    const { image, image1, image2, image3, image4, estate_title, segment_name, description, price, status, area, location, facilities, features } = house;
+
     useEffect(() => {
         AOS.init({
             duration: 600,
             easing: 'ease-in-out',
             offset: 200,
         })
-    }, [])
-
-    const houses = useLoaderData()
-    const { id } = useParams()
-    const idToInt = parseInt(id);
-    const house = houses.find(house => house.id === idToInt)
-    const { image, image1, image2, image3, image4, estate_title, segment_name, description, price, status, area, location, facilities, features } = house;
+    }, []);
 
     return (
         <div data-aos="fade-up" className="card rounded-md max-w-7xl mx-auto p-4 md:my-12 shadow-md">

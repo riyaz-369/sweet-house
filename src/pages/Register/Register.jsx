@@ -12,14 +12,6 @@ import { Helmet } from "react-helmet";
 
 const Register = () => {
 
-    useEffect(() => {
-        AOS.init({
-            duration: 600,
-            easing: 'ease-in-out',
-            offset: 200,
-        })
-    }, [])
-
     const { createUser, userProfile } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -50,7 +42,6 @@ const Register = () => {
                     toast.success("Registration Success !", { autoClose: 2500 });
                     userProfile(name, photoURL)
                         .then(() => {
-                            // navigate
                             setTimeout(() => {
                                 navigate("/");
                             }, 3000);
@@ -66,6 +57,14 @@ const Register = () => {
                 });
         }
     }
+
+    useEffect(() => {
+        AOS.init({
+            duration: 600,
+            easing: 'ease-in-out',
+            offset: 200,
+        })
+    }, []);
 
     return (
         <div data-aos="fade-right" className="md:max-w-lg lg:max-w-7xl mx-auto mt-12 mb-24 lg:flex items-center justify-between">

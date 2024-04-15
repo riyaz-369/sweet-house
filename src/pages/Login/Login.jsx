@@ -12,14 +12,6 @@ import { Helmet } from "react-helmet";
 
 const Login = () => {
 
-    useEffect(() => {
-        AOS.init({
-            duration: 600,
-            easing: 'ease-in-out',
-            offset: 200,
-        })
-    }, [])
-
     const [showPassword, setShowPassword] = useState(false);
     const { signInUser, signInWithGoogle, signInWithGitHub } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors }, } = useForm();
@@ -81,6 +73,14 @@ const Login = () => {
                 console.log(error.message);
             });
     }
+
+    useEffect(() => {
+        AOS.init({
+            duration: 600,
+            easing: 'ease-in-out',
+            offset: 200,
+        })
+    }, [])
 
     return (
         <div data-aos="fade-right" className="md:max-w-lg lg:max-w-7xl mx-auto mt-12 mb-24 lg:flex items-center justify-between">

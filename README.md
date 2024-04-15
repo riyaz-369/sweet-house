@@ -1,6 +1,6 @@
 ## Live Site:
 
-- #### [swwet-house.web.app](https://sweet-house-61d6e.web.app/)
+- #### [sweet-house](https://sweet-house-61d6e.web.app/)
 
 ## Using Packages:
 
